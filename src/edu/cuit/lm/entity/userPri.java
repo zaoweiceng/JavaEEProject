@@ -8,25 +8,25 @@ public class userPri {
       * 用户权限实体类
       *
       **/
-     private String account;
+     private Integer id;
      private String priTy;
-     private String priLv;
+     private Integer priLv;
 
     @Override
     public String toString() {
         return "userPri{" +
-                "account='" + account + '\'' +
+                "id=" + id +
                 ", priTy='" + priTy + '\'' +
-                ", priLv='" + priLv + '\'' +
+                ", priLv=" + priLv +
                 '}';
     }
 
-    public String getAccount() {
-        return account;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getPriTy() {
@@ -37,11 +37,11 @@ public class userPri {
         this.priTy = priTy;
     }
 
-    public String getPriLv() {
+    public Integer getPriLv() {
         return priLv;
     }
 
-    public void setPriLv(String priLv) {
+    public void setPriLv(Integer priLv) {
         this.priLv = priLv;
     }
 }

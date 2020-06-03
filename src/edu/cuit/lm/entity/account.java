@@ -10,60 +10,60 @@ public class account {
       * 账户信息实体类
       *
       **/
-     private String username;
-     private String account;
-     private Integer accountLen;
-     private Date date;
-     private String web;
+     private Integer id;
+     private String idUser;
+     private Integer idPwd;
+     private String idWeb;
+     private Date idDate;
 
      @Override
      public String toString() {
           return "account{" +
-                  "username='" + username + '\'' +
-                  ", account='" + account + '\'' +
-                  ", accountLen=" + accountLen +
-                  ", date=" + date +
-                  ", web='" + web + '\'' +
+                  "id=" + id +
+                  ", idUser='" + idUser + '\'' +
+                  ", idPwd=" + idPwd +
+                  ", idWeb='" + idWeb + '\'' +
+                  ", idDate=" + idDate +
                   '}';
      }
 
-     public String getUsername() {
-          return username;
+     public Integer getId() {
+          return id;
      }
 
-     public void setUsername(String username) {
-          this.username = username;
+     public void setId(Integer id) {
+          this.id = id;
      }
 
-     public String getAccount() {
-          return account;
+     public String getIdUser() {
+          return idUser;
      }
 
-     public void setAccount(String account) {
-          this.account = account;
+     public void setIdUser(String idUser) {
+          this.idUser = idUser;
      }
 
-     public Integer getAccountLen() {
-          return accountLen;
+     public Integer getIdPwd() {
+          return idPwd;
      }
 
-     public void setAccountLen(Integer accountLen) {
-          this.accountLen = accountLen;
+     public void setIdPwd(Integer idPwd) {
+          this.idPwd = idPwd;
      }
 
-     public Date getDate() {
-          return date;
+     public String getIdWeb() {
+          return idWeb;
      }
 
-     public void setDate(Date date) {
-          this.date = date;
+     public void setIdWeb(String idWeb) {
+          this.idWeb = idWeb;
      }
 
-     public String getWeb() {
-          return web;
+     public Date getIdDate() {
+          return idDate;
      }
 
-     public void setWeb(String web) {
-          this.web = web;
+     public void setIdDate(Date idDate) {
+          this.idDate = idDate;
      }
 }
