@@ -163,4 +163,12 @@ public class daoTest {
         mapper.delUserById(123444);
         sqlSession.commit();
     }
+
+    @Test
+    public void test11(){
+        userPriDao mapper = sqlSession.getMapper(userPriDao.class);
+        userPri userById = mapper.findUserById(123434);
+        System.out.println(userById);
+    }
+
 }
