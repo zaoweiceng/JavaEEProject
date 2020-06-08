@@ -10,7 +10,6 @@ import java.util.List;
 
 public interface accountDao {
 
-
     @Insert("insert into id_inf(id, idUser, idWeb, idDate, idPwd) value(#{id}, #{idUser}, #{idWeb}, #{idDate}, #{idPwd});")
     void insertInto(account a);
 
