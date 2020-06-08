@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6e16ddc-34c7-4c11-a0d9-a5817593ac91" name="Default Changelist" comment="test">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaEX/test/daoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/test/daoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtile.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="F:\JavaIdea\javaEX\.idea\shelf/" />
@@ -69,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="615">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,9 +157,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="378" />
-    <option name="y" value="164" />
-    <option name="width" value="1539" />
+    <option name="x" value="401" />
+    <option name="y" value="16" />
+    <option name="width" value="1352" />
     <option name="height" value="858" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -419,7 +417,7 @@
       <workItem from="1590562253696" duration="24000" />
       <workItem from="1591082868103" duration="4526000" />
       <workItem from="1591101831465" duration="325000" />
-      <workItem from="1591620113388" duration="7998000" />
+      <workItem from="1591620113388" duration="8807000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1591190712021</created>
@@ -428,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591190712021</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="utile1">
+      <created>1591628247899</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591628247899</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -440,7 +445,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20168000" />
+    <option name="totallyTimeSpent" value="20977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,10 +457,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="378" y="164" width="1539" height="858" extended-state="0" />
+    <frame x="401" y="16" width="1352" height="858" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17038539" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19504644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -568,7 +573,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="utile1" />
+    <option name="LAST_COMMIT_MESSAGE" value="utile1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/resource/mybatis.properties">
@@ -722,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="615">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
