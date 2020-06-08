@@ -10,7 +10,7 @@ public class userInf {
       * 用户信息实体类
       *
       **/
-    private String account;
+    private Integer idUser;
     private String realname;
     private String sex;
     private Date birthday;
@@ -20,7 +20,7 @@ public class userInf {
     @Override
     public String toString() {
         return "userInf{" +
-                "account='" + account + '\'' +
+                "idUser=" + idUser +
                 ", realname='" + realname + '\'' +
                 ", sex='" + sex + '\'' +
                 ", birthday=" + birthday +
@@ -29,12 +29,12 @@ public class userInf {
                 '}';
     }
 
-    public String getAccount() {
-        return account;
+    public Integer getIdUser() {
+        return idUser;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setIdUser(Integer idUser) {
+        this.idUser = idUser;
     }
 
     public String getRealname() {

@@ -8,29 +8,29 @@ public class password {
       * 密码信息实体类
       *
       **/
-     private String account;
+     private Integer idPwd;
      private String password;
-     private Double check;
+     private Double pwdCheck;
      private String note;
-     private Integer safty;
+     private Integer safety;
 
      @Override
      public String toString() {
           return "password{" +
-                  "account='" + account + '\'' +
+                  "idPwd=" + idPwd +
                   ", password='" + password + '\'' +
-                  ", check=" + check +
+                  ", pwdCheck=" + pwdCheck +
                   ", note='" + note + '\'' +
-                  ", safty=" + safty +
+                  ", safety=" + safety +
                   '}';
      }
 
-     public String getAccount() {
-          return account;
+     public Integer getIdPwd() {
+          return idPwd;
      }
 
-     public void setAccount(String account) {
-          this.account = account;
+     public void setIdPwd(Integer idPwd) {
+          this.idPwd = idPwd;
      }
 
      public String getPassword() {
@@ -41,12 +41,12 @@ public class password {
           this.password = password;
      }
 
-     public Double getCheck() {
-          return check;
+     public Double getPwdCheck() {
+          return pwdCheck;
      }
 
-     public void setCheck(Double check) {
-          this.check = check;
+     public void setPwdCheck(Double pwdCheck) {
+          this.pwdCheck = pwdCheck;
      }
 
      public String getNote() {
@@ -57,11 +57,11 @@ public class password {
           this.note = note;
      }
 
-     public Integer getSafty() {
-          return safty;
+     public Integer getSafety() {
+          return safety;
      }
 
-     public void setSafty(Integer safty) {
-          this.safty = safty;
+     public void setSafety(Integer safety) {
+          this.safety = safety;
      }
 }
