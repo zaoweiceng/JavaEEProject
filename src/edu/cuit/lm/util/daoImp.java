@@ -20,7 +20,7 @@ public class daoImp {
     public static userInfDao getUserInf(){
         return  sqlSession.getMapper(userInfDao.class);
     }
-    public static userPriDao getUserPriDao(){
+    public static userPriDao getUserPri(){
         return sqlSession.getMapper(userPriDao.class);
     }
 }
