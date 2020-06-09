@@ -4,6 +4,7 @@ import edu.cuit.lm.entity.account;
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userPri;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.util.List;
@@ -97,5 +98,15 @@ public class JDBCUtil {
 
     public userPri findUserPriById(int id){
         return daoImp.getUserPri().findUserById(id);
+    }
+
+    public userInf findUserInfById(int id){
+        return daoImp.getUserInf().findUserById(id);
+    }
+
+    @Test
+    public void test(){
+        userInf userInfById = findUserInfById(123434);
+        System.out.println(userInfById);
     }
 }
