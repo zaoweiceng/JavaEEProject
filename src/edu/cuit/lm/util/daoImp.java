@@ -5,8 +5,11 @@ import edu.cuit.lm.dao.passwordDao;
 import edu.cuit.lm.dao.userInfDao;
 import edu.cuit.lm.dao.userPriDao;
 import org.apache.ibatis.session.SqlSession;
-import org.junit.Test;
+import org.testng.annotations.AfterTest;
 
+/**
+ *
+ */
 public class daoImp {
     private static SqlSession sqlSession;
     static {
@@ -25,9 +28,5 @@ public class daoImp {
         return sqlSession.getMapper(userPriDao.class);
     }
 
-    @Test
-    public void test(){
-        getAccount();
-    }
 
 }

@@ -8,6 +8,7 @@ import edu.cuit.lm.entity.account;
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userPri;
+import edu.cuit.lm.util.JDBCUtile;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,13 +22,13 @@ import java.util.List;
  * Servlet implementation class DeleteUser
  */
 @WebServlet({ "/DeleteUser", "/delete.do" })
-public class delete extends HttpServlet {
+public class deleteUser extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public delete(){
+    public deleteUser(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,6 +38,8 @@ public class delete extends HttpServlet {
             ServletException, IOException {
         //1.接受参数
         int id = Integer.parseInt(request.getParameter("id"));
+        JDBCUtile jd = new JDBCUtile();
+        jd.delUser(id);
         //2.调用参数
 //        accountDao accountdao = new accountDao() {
 //            @Override
