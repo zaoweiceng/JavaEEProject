@@ -20,5 +20,6 @@ public interface userInfDao {
     @Update("update user_inf set  realname = #{realname}, sex = #{sex}, birthday = #{birthday}, tel = #{tel}, email = #{email} where idUser = #{idUser}")
     void updateUser(userInf user);
 
+    @Select("select * from user_inf where realname like #{name}")
     List<userInf> findUserByName(String name);
 }

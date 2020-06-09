@@ -36,4 +36,7 @@ public interface accountDao {
 
     @Update("update id_inf set idUser = #{idUser}, idWeb = #{idWeb}, idDate = #{idDate}, idPwd = #{idPwd} where id = #{id}")
     void updateById(account a);
+
+    @Select("select * from id_inf where idWeb like #{web}")
+    List<account> findAccountByWeb(String web);
 }

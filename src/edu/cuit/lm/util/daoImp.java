@@ -10,7 +10,7 @@ import org.junit.Test;
 public class daoImp {
     private static SqlSession sqlSession;
     static {
-        sqlSession = DBUtile.getSqlSession();
+        sqlSession = DBUtil.getSqlSession();
     }
     public static accountDao getAccount(){
         return sqlSession.getMapper(accountDao.class);

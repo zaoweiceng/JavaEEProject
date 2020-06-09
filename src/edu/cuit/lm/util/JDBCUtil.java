@@ -4,15 +4,14 @@ import edu.cuit.lm.entity.account;
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userPri;
-import org.junit.Test;
 
 import java.io.IOException;
 import java.util.List;
 
-public class JDBCUtile {
+public class JDBCUtil {
     public void close() throws IOException {
-        DBUtile.commit();
-        DBUtile.close();
+        DBUtil.commit();
+        DBUtil.close();
     }
 
     public boolean addAcount(account a) throws IOException {
@@ -32,6 +31,7 @@ public class JDBCUtile {
         }
         return false;
     }
+
     public void delUser(int id) throws IOException {
         List<account> accountById = daoImp.getAccount().findAccountById(id);
         for (account a : accountById) {
@@ -75,4 +75,27 @@ public class JDBCUtile {
         return User;
     }
 
+    public List<userInf> findUserByName(String name){
+        String n = "%" + name + "%";
+        List<userInf> userByName = daoImp.getUserInf().findUserByName(n);
+        return userByName;
+    }
+
+    public List<account> findAccountByName(String name){
+        String n = "%" + name + "%";
+        List<account> accountByWeb = daoImp.getAccount().findAccountByWeb(n);
+        return accountByWeb;
+    }
+
+    public List<account> findAccountById(int id){
+        return  daoImp.getAccount().findAccountById(id);
+    }
+
+    public password findPasswordById(int id){
+        return daoImp.getPassword().findPwdById(id);
+    }
+
+    public userPri findUserPriById(int id){
+        return daoImp.getUserPri().findUserById(id);
+    }
 }
