@@ -8,8 +8,8 @@
     <meta http-equiv="refresh" content="5;url=login.jsp">
     <LINK href="css/WelcomeGame.css" type=text/css rel=stylesheet>
   </head>
-  <body>
-  <div class="text">
+<body>
+  <div class="text" style="color: #0f0f0f">
     欢迎使用账号密码管理系统<br>
     <text class="subtext">5秒后将为你跳转到登录界面</text>
   </div>
