@@ -86,19 +86,19 @@ A:active {
 	CLEAR: both; MARGIN: 20px auto 0px; WIDTH: 760px
 }
 #Header #logo {
-	BACKGROUND: #2aabd2 no-repeat left top; FLOAT: left; WIDTH: 150px; TEXT-INDENT: -9999px; HEIGHT: 30px
+	BACKGROUND: #ffffff no-repeat left top; FLOAT: left; WIDTH: 150px; TEXT-INDENT: -9999px; HEIGHT: 30px
 }
 #Header #menu {
 	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; COLOR: #277dbb; PADDING-TOP: 10px
 }
 #Container {
-	CLEAR: both; BACKGROUND: #2aabd2 no-repeat left 20px; MARGIN: auto; WIDTH: 760px
+	CLEAR: both; BACKGROUND: #ffffff no-repeat left 20px; MARGIN: auto; WIDTH: 760px
 }
 #Container .Sidebar {
 	RIGHT: 20px; BACKGROUND: #fff; FLOAT: right; WIDTH: 250px; POSITION: relative; TOP: 0px; TEXT-ALIGN: left
 }
 #Container .Sidebar FORM {
-	BORDER-RIGHT: #adadad 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #adadad 1px solid; PADDING-LEFT: 20px; BACKGROUND: #2aabd2 no-repeat 15px 15px; PADDING-BOTTOM: 0px; BORDER-LEFT: #adadad 1px solid; PADDING-TOP: 50px; BORDER-BOTTOM: #adadad 1px solid
+	BORDER-RIGHT: #adadad 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #adadad 1px solid; PADDING-LEFT: 20px; BACKGROUND: #ffffff no-repeat 15px 15px; PADDING-BOTTOM: 0px; BORDER-LEFT: #adadad 1px solid; PADDING-TOP: 50px; BORDER-BOTTOM: #adadad 1px solid
 }
 #Container .Sidebar FORM UL {
 	

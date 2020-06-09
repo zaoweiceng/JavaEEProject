@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "monospace";
+    background-image: linear-gradient(90deg,antiquewhite,greenyellow,springgreen,orangered,cyan,yellowgreen 100%);
+    background-size: 200%;
+    animation: bganimation 15s infinite;
+}
+
+.text{
+    color: white;
+    font-family: 等线;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 350px 0;
+    font-size: 30px;
+}
+
+.subtext{
+    font-size: 10px;
+    font-family: 等线;
+}
+@keyframes bganimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
