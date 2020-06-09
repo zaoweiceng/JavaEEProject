@@ -3,6 +3,8 @@ package edu.cuit.lm.dao;
 import edu.cuit.lm.entity.userInf;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 public interface userInfDao {
 
     @Select("select * from user_inf where idUser = #{id}")
@@ -17,4 +19,6 @@ public interface userInfDao {
 
     @Update("update user_inf set  realname = #{realname}, sex = #{sex}, birthday = #{birthday}, tel = #{tel}, email = #{email} where idUser = #{idUser}")
     void updateUser(userInf user);
+
+    List<userInf> findUserByName(String name);
 }

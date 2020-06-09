@@ -91,8 +91,8 @@ public class daoTest {
         a.setIdWeb("aaa");
         a.setIdUser("asd");
         mapper.insertInto(a);
-        account accountById = mapper.findAccountById(1001001);
-        System.out.println(accountById);
+        //account accountById = mapper.findAccountById(1001001);
+        //System.out.println(accountById);
         sqlSession.commit();
     }
 

@@ -16,6 +16,7 @@ public class userInf {
     private Date birthday;
     private String tel;
     private String email;
+    private String pWd;
 
     @Override
     public String toString() {
@@ -26,6 +27,7 @@ public class userInf {
                 ", birthday=" + birthday +
                 ", tel='" + tel + '\'' +
                 ", email='" + email + '\'' +
+                ", pWd='" + pWd + '\'' +
                 '}';
     }
 
@@ -75,5 +77,13 @@ public class userInf {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getpWd() {
+        return pWd;
+    }
+
+    public void setpWd(String pWd) {
+        this.pWd = pWd;
     }
 }
