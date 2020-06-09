@@ -14,8 +14,12 @@ public class  DBUtile {
     private static SqlSessionFactory factory;
     private static SqlSession sqlSession;
 
-    public static void init() throws IOException {
-        in =  Resources.getResourceAsStream("mybatisConf.xml");
+    static  {
+        try {
+            in =  Resources.getResourceAsStream("mybatisConf.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         builder =  new SqlSessionFactoryBuilder();
         factory  = builder.build(in);
         sqlSession = factory.openSession();
