@@ -104,9 +104,10 @@ public class JDBCUtil {
         return daoImp.getUserInf().findUserById(id);
     }
 
-    @Test
-    public void test(){
-        userInf userInfById = findUserInfById(123434);
-        System.out.println(userInfById);
+    public account findAccountByWebAndId(int id, String web){
+        account a = new account();
+        a.setId(id);
+        a.setIdWeb(web);
+        return daoImp.getAccount().findAccountByWebAndId(a);
     }
 }

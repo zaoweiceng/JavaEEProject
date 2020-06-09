@@ -14,12 +14,8 @@ public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         // 1 接收请求，并获取请求参数
-//        int id = Integer.parseInt(request.getParameter("UserName").trim());
-        int id = 0;
-        System.out.println("输出的id");
-        System.out.println(request.getParameter("name"));
+        int id = Integer.parseInt(request.getParameter("name").trim());
         String pass = request.getParameter("pass");
-        System.out.println(pass);
         // 2 调用业务，并获取业务数据
         boolean x = logInUtil.check(id, pass);
         // 3 数据传递，并页面导航
