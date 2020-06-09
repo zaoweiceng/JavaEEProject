@@ -5,7 +5,7 @@ import edu.cuit.lm.dao.passwordDao;
 import edu.cuit.lm.dao.userInfDao;
 import edu.cuit.lm.dao.userPriDao;
 import org.apache.ibatis.session.SqlSession;
-import org.testng.annotations.AfterTest;
+
 
 /**
  *
