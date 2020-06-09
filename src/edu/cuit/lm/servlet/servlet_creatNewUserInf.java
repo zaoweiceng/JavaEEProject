@@ -2,7 +2,6 @@ package edu.cuit.lm.servlet;
 
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.util.JDBCUtil;
-import edu.cuit.lm.util.JDBCUtil;
 
 import java.io.IOException;
 
