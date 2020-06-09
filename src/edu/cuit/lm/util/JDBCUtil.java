@@ -24,6 +24,11 @@ public class JDBCUtil {
         return false;
     }
 
+    public void addPassword(password pwd){
+        daoImp.getPassword().insertInto(pwd);
+        DBUtil.commit();
+    }
+
     public boolean addUser(userInf user) throws IOException {
         if (user != null){
             daoImp.getUserInf().insertInto(user);

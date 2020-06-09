@@ -21,4 +21,23 @@ public class packUtil {
         us.setPassword(passwordById.getPassword());
         return us;
     }
+
+    public void zip(password pwd){
+        double random = Math.random();
+        pwd.setPwdCheck(random);
+        String password = pwd.getPassword();
+        String p1 = "";
+        int n = (int)random;
+        char[] chars = password.toCharArray();
+        for (char aChar : chars) {
+            aChar = (char) ((int)aChar + n);
+            p1 += aChar;
+        }
+    }
+
+    public void unzip(){
+
+    }
+
+
 }

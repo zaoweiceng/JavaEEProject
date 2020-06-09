@@ -39,7 +39,12 @@ public class findPassWord extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
-        password passwordById = jd.findPasswordById(id);
+
+        password pwd = new password();
+        jd.addPassword(pwd);
+        account ac = new account();
+        ac.setIdPwd(pwd.getIdPwd());
+        jd.addAcount(ac);
 
 
         //3.跳转
