@@ -22,6 +22,9 @@ public interface accountDao {
     @Select("select * from id_inf where id = #{id}")
     List<account> findAccountById(int id);
 
+    @Select("select * from id_inf where id = #{id} and idWeb = #{idWeb}")
+    account findAccountByWebAndId(account a);
+
     @Select("select * from id_inf")
     List<account> findAll();
 
