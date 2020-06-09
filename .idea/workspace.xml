@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6e16ddc-34c7-4c11-a0d9-a5817593ac91" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/dao/accountDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/dao/accountDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/dao/userInfDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/dao/userInfDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/entity/userInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/entity/userInf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cuit/lm/controler/deleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cuit/lm/controler/deleteUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cuit/lm/controler/findID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cuit/lm/controler/findID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cuit/lm/servlet/servlet_creatNewUserInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cuit/lm/servlet/servlet_creatNewUserInf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cuit/lm/util/daoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cuit/lm/util/daoImp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="F:\JavaIdea\javaEX\.idea\shelf/" />
@@ -40,19 +43,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/entity/account.java">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="269">
+              <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2951#2952#0" expanded="true" />
+                <element signature="e#2979#2980#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/DBUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/packUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="87">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/logInUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/daoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,11 +86,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/servlet/servlet_creatNewUserInf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="290">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/findID.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/deleteUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="151" selection-start-line="151" selection-end-line="151" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/daoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1683">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/regAccount.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/accountImp.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/DBUtile.java" />
-        <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/daoImp.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/controler/find.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/controler/delete.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/entity/userInf.java" />
@@ -139,7 +197,13 @@
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/dao/userInfDao.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/dao/accountDao.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtile.java" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/daoImp.java" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/servlet/servlet_creatNewUserInf.java" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/controler/findID.java" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/controler/deleteUser.java" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/packUtil.java" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/logInUtil.java" />
       </list>
     </option>
   </component>
@@ -151,11 +215,11 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="46" />
-    <option name="y" value="139" />
-    <option name="width" value="1352" />
-    <option name="height" value="858" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="38" />
+    <option name="y" value="279" />
+    <option name="width" value="1482" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -310,7 +374,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JDBCUtil.Test">
+  <component name="RunManager" selected="JUnit.JDBCUtil.test">
     <configuration name="JDBCUtil.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="javaEX" />
       <extension name="coverage">
@@ -446,8 +510,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JDBCUtil.Test" />
         <item itemvalue="JUnit.JDBCUtil.test" />
+        <item itemvalue="JUnit.JDBCUtil.Test" />
         <item itemvalue="JUnit.daoImp.test" />
         <item itemvalue="JUnit.daoTest.test11" />
       </list>
@@ -470,7 +534,7 @@
       <workItem from="1591082868103" duration="4526000" />
       <workItem from="1591101831465" duration="325000" />
       <workItem from="1591620113388" duration="20709000" />
-      <workItem from="1591703723081" duration="779000" />
+      <workItem from="1591703723081" duration="2667000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1591190712021</created>
@@ -507,19 +571,17 @@
       <option name="project" value="LOCAL" />
       <updated>1591684751152</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Util_finish1">
+      <created>1591704513666</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591704513666</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JDBCUtile_test - 2020.06.09 at 11h 25m 51s.xml">
-      <configuration name="JDBCUtile.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JDBCUtile_test - 2020.06.09 at 11h 34m 27s.xml">
-      <configuration name="JDBCUtile.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JDBCUtile_test - 2020.06.09 at 11h 36m 16s.xml">
-      <configuration name="JDBCUtile.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JDBCUtile_Test - 2020.06.09 at 11h 51m 06s.xml">
       <configuration name="JDBCUtile.Test" configurationId="JUnit" />
     </history-entry>
@@ -541,9 +603,18 @@
     <history-entry file="JDBCUtile_Test - 2020.06.09 at 12h 08m 15s.xml">
       <configuration name="JDBCUtile.Test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JDBCUtil_test - 2020.06.09 at 20h 41m 03s.xml">
+      <configuration name="JDBCUtil.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JDBCUtil_test - 2020.06.09 at 20h 41m 25s.xml">
+      <configuration name="JDBCUtil.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JDBCUtil_test - 2020.06.09 at 20h 43m 46s.xml">
+      <configuration name="JDBCUtil.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33658000" />
+    <option name="totallyTimeSpent" value="35546000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,10 +626,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="139" width="1352" height="858" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25851393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17803837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -568,7 +639,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5117566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.42663893" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39972338" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -576,12 +647,12 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32978722" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50077397" side_tool="true" visible="true" weight="0.32918397" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.38605618" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49946696" weight="0.43568465" />
       <window_info anchor="bottom" id="Spring" order="14" />
-      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.499226" visible="true" weight="0.32918397" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.499226" weight="0.32918397" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -676,7 +747,8 @@
     <MESSAGE value="test10" />
     <MESSAGE value="find" />
     <MESSAGE value="Util_finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Util_finish" />
+    <MESSAGE value="Util_finish1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Util_finish1" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -779,24 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/daoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#849#850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/find.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -822,16 +876,6 @@
           <folding>
             <element signature="e#1111#1112#0" expanded="true" />
             <element signature="e#1137#1138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/daoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -873,13 +917,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/test/daoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="1683">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/daoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/servlet/servlet_creatNewUserInf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/findID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/deleteUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="151" selection-start-line="151" selection-end-line="151" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2951#2952#0" expanded="true" />
+            <element signature="e#2979#2980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/packUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/logInUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
