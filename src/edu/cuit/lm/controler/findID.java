@@ -8,7 +8,7 @@ import edu.cuit.lm.entity.account;
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userPri;
-import edu.cuit.lm.util.JDBCUtile;
+import edu.cuit.lm.util.JDBCUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,7 +36,7 @@ public class findID extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        JDBCUtile jd = new JDBCUtile();
+        JDBCUtil jd = new JDBCUtil();
 
 
         

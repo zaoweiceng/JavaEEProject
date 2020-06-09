@@ -8,7 +8,7 @@ import edu.cuit.lm.entity.account;
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userPri;
-import edu.cuit.lm.util.JDBCUtile;
+import edu.cuit.lm.util.JDBCUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,7 +38,7 @@ public class deleteUser extends HttpServlet {
             ServletException, IOException {
         //1.接受参数
         int id = Integer.parseInt(request.getParameter("id"));
-        JDBCUtile jd = new JDBCUtile();
+        JDBCUtil jd = new JDBCUtil();
         jd.delUser(id);
         //2.调用参数
 //        accountDao accountdao = new accountDao() {
