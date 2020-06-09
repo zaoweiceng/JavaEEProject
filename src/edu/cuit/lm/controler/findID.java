@@ -22,13 +22,13 @@ import java.util.List;
  * Servlet implementation class DeleteUser
  */
 @WebServlet({ "/DeleteUser", "/delete.do" })
-public class find extends HttpServlet {
+public class findID extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public find(){
+    public findID(){
         super();
         // TODO Auto-generated constructor stub
     }
