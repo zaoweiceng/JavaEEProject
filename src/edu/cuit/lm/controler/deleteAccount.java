@@ -12,7 +12,7 @@ import java.io.IOException;
 /*
         * Servlet implementation class DeleteUser
  */
-//@WebServlet({ "/DeleteUser", "/delete.do" })
+@WebServlet({ "/deleteAcount"})
 public class deleteAccount extends HttpServlet {
     private static final long serialVersionUID =1L;
 

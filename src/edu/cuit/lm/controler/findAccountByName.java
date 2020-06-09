@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Servlet implementation class DeleteUser
  */
-//@WebServlet({ "/DeleteUser", "/delete.do" })
+@WebServlet({ "/findAccountByName"})
 public class findAccountByName extends HttpServlet {
     private static final long serialVersionUID =1L;
 
