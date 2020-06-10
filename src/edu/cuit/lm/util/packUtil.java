@@ -6,6 +6,7 @@ import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userSaw;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class packUtil {
@@ -23,12 +24,53 @@ public class packUtil {
         return us;
     }
 
+    public List<userSaw> finUserSawAllById(int id){
+        JDBCUtil jd = new JDBCUtil();
+        List<userSaw> list = new ArrayList<>();
+        List<account> accountById = jd.findAccountById(id);
+        for (account a : accountById) {
+            userSaw us = new userSaw();
+            password passwordById = jd.findPasswordById(a.getIdPwd());
+            unzip(passwordById);
+            us.setPassword(passwordById.getPassword());
+            us.setNote(passwordById.getNote());
+            us.setIdWeb(a.getIdWeb());
+            us.setIdUser(a.getIdUser());
+            us.setIdDate(a.getIdDate());
+            list.add(us);
+        }
+        return list;
+    }
+
+    @Test
+    public void zp(){
+        List<account> all = daoImp.getAccount().findAll();
+        for (account a : all) {
+            password pwdById = daoImp.getPassword().findPwdById(a.getIdPwd());
+            zip(pwdById);
+            daoImp.getPassword().updateById(pwdById);
+        }
+        DBUtil.commit();
+    }
+
+    @Test
+    public void up(){
+        List<account> all = daoImp.getAccount().findAll();
+        for (account a : all) {
+            password pwdById = daoImp.getPassword().findPwdById(a.getIdPwd());
+            unzip(pwdById);
+            System.out.println(pwdById);
+        }
+        //DBUtil.commit();
+    }
+
     public void zip(password pwd){
         double random = Math.random();
         random *= 10;
         pwd.setPwdCheck(random);
         String password = pwd.getPassword();
         String p1 = "";
+        pwd.setPwdCheck(random);
         int n = (int)random;
         char[] chars = password.toCharArray();
         int flag = 0;
