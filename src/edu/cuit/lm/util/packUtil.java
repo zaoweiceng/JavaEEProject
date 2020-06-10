@@ -4,6 +4,7 @@ import edu.cuit.lm.entity.account;
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userSaw;
+import org.junit.Test;
 
 import java.util.List;
 
@@ -24,19 +25,58 @@ public class packUtil {
 
     public void zip(password pwd){
         double random = Math.random();
+        random *= 10;
         pwd.setPwdCheck(random);
         String password = pwd.getPassword();
         String p1 = "";
         int n = (int)random;
         char[] chars = password.toCharArray();
+        int flag = 0;
         for (char aChar : chars) {
-            aChar = (char) ((int)aChar + n);
+            if (flag == 0){
+                aChar = (char) ((int)aChar - n);
+                flag = 1;
+            }else {
+                aChar = (char) ((int)aChar + n);
+                flag = 0;
+            }
+
             p1 += aChar;
         }
+        pwd.setPassword(p1);
     }
 
-    public void unzip(){
+    @Test
+    public void test(){
+        List<password> all = daoImp.getPassword().findAll();
+        for (password p : all) {
+            System.out.println(p);
+            zip(p);
+            System.out.println(p);
+            unzip(p);
+            System.out.println(p);
+        }
 
+    }
+    public void unzip(password pwd){
+        String password = pwd.getPassword();
+        String p1 = "";
+        double pwdCheck = pwd.getPwdCheck();
+        int n = (int)pwdCheck;
+        char[] chars = password.toCharArray();
+        int flag = 0;
+        for (char aChar : chars) {
+            if (flag == 0){
+                aChar = (char) ((int)aChar + n);
+                flag = 1;
+            }else {
+                aChar = (char) ((int)aChar - n);
+                flag = 0;
+            }
+
+            p1 += aChar;
+        }
+        pwd.setPassword(p1);
     }
 
 
