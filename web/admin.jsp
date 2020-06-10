@@ -98,15 +98,16 @@
     <div class="container">
         <h3 style="text-align: center">用户信息列表</h3>
         <div style="float: left; margin-bottom: 5px">
-            <form class="form-inline" action="${pageContext.request.contextPath}/" method="post">
+            <form class="form-inline" action="${pageContext.request.contextPath}/findIdUserByName_manage" method="post">
                 <div class="form-group">
                     <label for="name">用户姓名</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="请输入用户姓名" value="${user_inf.realname}">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="请输入用户姓名" value="${realname}">
                 </div>
                 <button type="submit" class="btn btn-default">查询</button>
             </form>
         </div>
         <div style="float: right; margin-bottom: 5px">
+
             <a colspan="8" class="btn btn-primary" href="/findAll">刷新</a>
         </div>
         <form id="mainTable" name="mainTable" action="${pageContext.request.contextPath}/deleteUser" method="post">
