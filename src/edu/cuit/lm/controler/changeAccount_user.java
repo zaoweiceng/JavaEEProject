@@ -4,11 +4,9 @@ import edu.cuit.lm.dao.accountDao;
 import edu.cuit.lm.dao.passwordDao;
 import edu.cuit.lm.dao.userInfDao;
 import edu.cuit.lm.dao.userPriDao;
-import edu.cuit.lm.entity.account;
-import edu.cuit.lm.entity.password;
-import edu.cuit.lm.entity.userInf;
-import edu.cuit.lm.entity.userPri;
+import edu.cuit.lm.entity.*;
 import edu.cuit.lm.util.JDBCUtil;
+import edu.cuit.lm.util.packUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,13 +21,13 @@ import java.util.List;
  * Servlet implementation class DeleteUser
  */
 @WebServlet({ "/changeAccountName"})
-public class changeAccount extends HttpServlet {
+public class changeAccount_user extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public changeAccount(){
+    public changeAccount_user(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -54,8 +52,9 @@ public class changeAccount extends HttpServlet {
         ac.setIdUser(idUser);
         jd.updateAccount(ac);
         //3.跳转
+        request.setAttribute("account_id", ac);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        request.getRequestDispatcher("/user.jsp").forward(request, response);
+        request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

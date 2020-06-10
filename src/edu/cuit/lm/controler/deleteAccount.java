@@ -1,6 +1,7 @@
 package edu.cuit.lm.controler;
 
 
+import edu.cuit.lm.entity.account;
 import edu.cuit.lm.util.JDBCUtil;
 
 import javax.servlet.ServletException;
@@ -29,11 +30,19 @@ public class deleteAccount extends HttpServlet {
             ServletException, IOException {
         //1.接受参数
         int id = Integer.parseInt(request.getParameter("id").trim());
+        String web = request.getParameter("pwd");
         JDBCUtil jd = new JDBCUtil();
-        jd.delAccount(id);
+        //删除一条消息；
+
+        //jd.delAccount(id);
+        account ac = new account();
+        ac.setId(id);
+        ac.setIdWeb(web);
+        jd.delAccountByIdAndByWeb(ac);
         //3.跳转
+        request.setAttribute("account_id", ac);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        request.getRequestDispatcher("/user.jsp").forward(request, response);
+        request.getRequestDispatcher("/finAllUserSaw").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
