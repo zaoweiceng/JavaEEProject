@@ -36,6 +36,7 @@ public class findIdUserByName_manage extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
+        request.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
@@ -43,7 +44,8 @@ public class findIdUserByName_manage extends HttpServlet {
 
         //3.跳转
 
-        request.setAttribute("list_findIdUserByName_manage", list_findIdUserByName_manage);
+        request.setAttribute("realname", name);
+        request.setAttribute("list_Login", list_findIdUserByName_manage);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/admin.jsp").forward(request, response);
 

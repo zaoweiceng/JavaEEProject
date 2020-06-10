@@ -83,6 +83,15 @@ public class JDBCUtil {
         return userByName;
     }
 
+    @Test
+    public void t2(){
+        List<userInf> list = findUserByName("小");
+        for (userInf i : list) {
+            System.out.println(i);
+        }
+    }
+
+
     public List<account> findAccountByName(String name){
         String n = "%" + name + "%";
         List<account> accountByWeb = daoImp.getAccount().findAccountByWeb(n);

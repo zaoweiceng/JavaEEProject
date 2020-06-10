@@ -6,43 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e16ddc-34c7-4c11-a0d9-a5817593ac91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a6e16ddc-34c7-4c11-a0d9-a5817593ac91" name="Default Changelist" comment="pri12c00">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/addNewAccout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/addNewAccout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/changeAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/changeAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/changeUserPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/changeUserPassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/changeUserPassword_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/changeUserPassword_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/deleteAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/deleteAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/deleteUser_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/deleteUser_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findAccountByName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findAccountByName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findAccountId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findAccountId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findIdUserByName_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findIdUserByName_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findPassWord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findUserById_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/findUserById_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/newUserInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/controler/newUserInf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/dao/userInfDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/edu/cuit/lm/dao/userInfDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/mybatisConf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/WEB-INF/classes/mybatisConf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaEX_war_exploded/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/addNewAccout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/addNewAccout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/changeAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/changeAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/changeUserPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/changeUserPassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/changeUserPassword_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/changeUserPassword_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/deleteAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/deleteAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/deleteUser_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/deleteUser_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findAccountByName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findAccountByName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findAccountId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findAccountId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findIdUserByName_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findIdUserByName_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findPassWord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findUserById_manage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/findUserById_manage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/newUserInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/controler/newUserInf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/dao/userInfDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/edu/cuit/lm/dao/userInfDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaEX/mybatisConf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaEX/mybatisConf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cuit/lm/controler/newUserInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cuit/lm/controler/newUserInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mybatisConf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mybatisConf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,19 +40,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/add.jsp">
+        <entry file="file://$PROJECT_DIR$/web/admin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="94" column="7" lean-forward="true" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
+            <state relative-caret-position="347">
+              <caret line="128" column="26" selection-start-line="128" selection-start-column="26" selection-end-line="128" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/findIdUserByName_manage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="91" selection-start-line="91" selection-start-column="4" selection-end-line="93" selection-end-column="13" />
+            <state relative-caret-position="257">
+              <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,20 +75,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/newUserInf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
+            <state relative-caret-position="754">
               <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/packUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/addNewAccout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-642">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/changeAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -143,11 +130,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java" />
         <option value="$PROJECT_DIR$/src/mybatisConf.xml" />
         <option value="$PROJECT_DIR$/web/add.jsp" />
         <option value="$PROJECT_DIR$/src/edu/cuit/lm/controler/newUserInf.java" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java" />
+        <option value="$PROJECT_DIR$/web/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/edu/cuit/lm/controler/findIdUserByName_manage.java" />
       </list>
     </option>
   </component>
@@ -166,11 +155,11 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="590" />
-    <option name="y" value="163" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="558" />
+    <option name="y" value="235" />
     <option name="width" value="1311" />
-    <option name="height" value="795" />
+    <option name="height" value="756" />
   </component>
   <component name="ProjectId" id="1d7cTHjgYHDtOYroWjMpUrXMHHQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -312,6 +301,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JDBCUtil.t2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaEX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.cuit.lm.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.cuit.lm.util" />
+      <option name="MAIN_CLASS_NAME" value="edu.cuit.lm.util.JDBCUtil" />
+      <option name="METHOD_NAME" value="t2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="daoTest.t" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="javaEX" />
       <extension name="coverage">
@@ -355,22 +360,6 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.daoTest" />
       <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="packUtil.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="javaEX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.cuit.lm.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.cuit.lm.util" />
-      <option name="MAIN_CLASS_NAME" value="edu.cuit.lm.util.packUtil" />
-      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -450,19 +439,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.daoTest" />
-      <item itemvalue="JUnit.packUtil.test" />
       <item itemvalue="JUnit.daoTest.test" />
       <item itemvalue="JUnit.daoTest.test1" />
       <item itemvalue="JUnit.daoTest.t" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.501" />
+      <item itemvalue="JUnit.JDBCUtil.t2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JDBCUtil.t2" />
         <item itemvalue="Application.daoTest" />
         <item itemvalue="JUnit.daoTest.test" />
         <item itemvalue="JUnit.daoTest.t" />
         <item itemvalue="JUnit.daoTest.test1" />
-        <item itemvalue="JUnit.packUtil.test" />
       </list>
     </recent_temporary>
   </component>
@@ -653,17 +642,39 @@
       <option name="project" value="LOCAL" />
       <updated>1591787809442</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="pri12c">
+      <created>1591795066652</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1591795066652</updated>
+    </task>
+    <task id="LOCAL-00023" summary="pri12c00">
+      <created>1591795971488</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1591795971488</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="JDBCUtil_t2 - 2020.06.10 at 21h 25m 18s.xml">
+      <configuration name="JDBCUtil.t2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JDBCUtil_t2 - 2020.06.10 at 21h 25m 48s.xml">
+      <configuration name="JDBCUtil.t2" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4329000" />
+    <option name="totallyTimeSpent" value="5446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20415778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20415778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -673,7 +684,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.33402705" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.33402705" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39972338" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -786,7 +797,8 @@
     <MESSAGE value="pri1" />
     <MESSAGE value="pri12" />
     <MESSAGE value="pri12c" />
-    <option name="LAST_COMMIT_MESSAGE" value="pri12c" />
+    <MESSAGE value="pri12c00" />
+    <option name="LAST_COMMIT_MESSAGE" value="pri12c00" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="40" key="#Tomcat_8.5.501" timestamp="1591779602631">
@@ -885,16 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mybatisConf.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -909,6 +911,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/findUserById_manage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/packUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -919,17 +935,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/util/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="128" column="26" selection-start-line="128" selection-start-column="26" selection-end-line="128" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/findIdUserByName_manage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/newUserInf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
+        <state relative-caret-position="754">
           <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/addNewAccout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="91" selection-start-line="91" selection-start-column="4" selection-end-line="93" selection-end-column="13" />
+        <state relative-caret-position="-642">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cuit/lm/controler/changeAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
