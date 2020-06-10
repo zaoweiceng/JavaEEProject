@@ -39,7 +39,7 @@
 <UL class=help>
 
   <LI>如果你密码丢失或原有用户名登录不了，请试试<A 
-  href="FindMiMa.jsp">找回密码</A>。 
+  href="Findpwd.jsp">找回密码</A>。
 </UL></DIV>
 <DIV >
 <DL class=d1>

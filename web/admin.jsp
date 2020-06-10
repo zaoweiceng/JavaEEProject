@@ -5,9 +5,10 @@
   Time: 22:56
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ page import="java.sql.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -47,7 +48,52 @@
     </script>
 </head>
 <body>
-欢迎您，管理员
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <li><a class="navbar-brand" href="login.jsp">返回登录页</a></li>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <c:if test="${user.username != null}">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="${pageContext.request.contextPath}/findIdUserByName?curPage=1&rows=5">用户信息</a></li>
+                    <li><a href="${pageContext.request.contextPath}/findNote?t_curPage=1&t_rows=12">备忘录</a></li>
+                </ul>
+            </c:if>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <c:if test="${user.username == null || user.username == ''}">
+                    <a href="login.jsp">请登录</a>
+                    </c:if>
+                    <c:if test="${user.username != null}">
+                    <a>${user.username}, 欢迎您！</a>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">个人中心 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="user.jsp" target="_blank">账户信息</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="${pageContext.request.contextPath}/logOut">退出登录</a></li>
+                    </ul>
+                </li>
+                </c:if>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<br><br>
 <div class="prod clear">
     <div class="container">
         <h3 style="text-align: center">用户信息列表</h3>
@@ -77,15 +123,15 @@
                     <td>邮箱</td>
                     <td>操作</td>
                 </tr>
-                <c:forEach items="${page.list}" var="us" varStatus="s">
+                <c:forEach items="${list_Login.list}" var="us" varStatus="s">
                     <tr>
                         <th><input type="checkbox" name="delId" id="delId" value="${us.id}"></th>
-                        <td>${us.id}</td>
-                        <td>${us.web}</td>
-                        <td>${us.name}</td>
-                        <td>${us.pwd}</td>
-                        <td>${us.pri}</td>
-                        <td>${us.pri}</td>
+                        <td>${us.idUser}</td>
+                        <td>${us.realname}</td>
+                        <td>${us.sex}</td>
+                        <td>${us.birthday}</td>
+                        <td>${us.tel}</td>
+                        <td>${us.email}</td>
                         <td><a class="btn btn-default btn-sm"
                                href="${pageContext.request.contextPath}/findUser?id=${us.id}&web=${id_inf.idWeb}&name=${user_inf.idUser}">修改</a>&nbsp;
                             <a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.id})">删除</a></td>
