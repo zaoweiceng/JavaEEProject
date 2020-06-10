@@ -21,14 +21,14 @@ import java.util.List;
 /**
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/changeUserPassword"})
-public class changeUserPassword extends HttpServlet {
+@WebServlet({ "/changeUserPassword_manage"})
+public class changeUserPassword_manage extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public changeUserPassword(){
+    public changeUserPassword_manage(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,12 +45,12 @@ public class changeUserPassword extends HttpServlet {
         user.setIdUser(id);
         user.setpWd(pass);
         jd.updateUserInf(user);
-        List<account> list_changeUserPassword = jd.findAccountById(id);
+        List<userInf> list_changeUserPassword_manage = jd.findUserAll();
 
         //3.跳转
-        request.setAttribute("list_changeUserPassword", list_changeUserPassword);
+        request.setAttribute("list_changeUserPassword_manage", list_changeUserPassword_manage);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("/user.jsp");
+        response.sendRedirect("/admin.jsp");
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

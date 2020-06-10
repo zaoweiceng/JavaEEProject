@@ -16,19 +16,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 /**
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/changeUserPassword"})
-public class changeUserPassword extends HttpServlet {
+@WebServlet({ "/addNewAccount"})
+public class addNewAccout extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public changeUserPassword(){
+    public addNewAccout(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,21 +37,21 @@ public class changeUserPassword extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
-        int id = Integer.parseInt(request.getParameter("id"));
-        //获取新密码
-        String pass = request.getParameter("pass");
-        //2.函数，修改函数/修改idUser
+        account ac = new account();
+        ac.setId(Integer.parseInt(request.getParameter("id")));
+        ac.setIdUser(request.getParameter("idUser"));
+        ac.setIdPwd(request.getIntHeader("pass"));
+        ac.setIdWeb(request.getParameter("web"));
+        ac.setIdDate(new Date(request.getParameter("Date")));
+        //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
-        userInf user = new userInf();
-        user.setIdUser(id);
-        user.setpWd(pass);
-        jd.updateUserInf(user);
-        List<account> list_changeUserPassword = jd.findAccountById(id);
-
+        jd.addAcount(ac);
+        List<account> list = jd.findAccountById(ac.getId());
         //3.跳转
-        request.setAttribute("list_changeUserPassword", list_changeUserPassword);
+
+        request.setAttribute("findIdUserByName_manage_get", list);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("/user.jsp");
+        response.sendRedirect("/admin.jsp");
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -58,4 +59,3 @@ public class changeUserPassword extends HttpServlet {
         doGet(request, response);
     }
 }
-

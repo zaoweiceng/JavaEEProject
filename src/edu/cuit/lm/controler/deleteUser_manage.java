@@ -22,13 +22,13 @@ import java.util.List;
  * Servlet implementation class DeleteUser
  */
 @WebServlet({ "/dleteUser"})
-public class deleteUser extends HttpServlet {
+public class deleteUser_manage extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public deleteUser(){
+    public deleteUser_manage(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,9 +41,11 @@ public class deleteUser extends HttpServlet {
         //2.删除User
         JDBCUtil jd = new JDBCUtil();
         jd.delUser(id);
+        List<userInf> List_manage = jd.findUserAll();
         //3.跳转
+        request.setAttribute("findIdUserByName_manage_get", List_manage);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("showUser");
+        response.sendRedirect("/admin.jsp");
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

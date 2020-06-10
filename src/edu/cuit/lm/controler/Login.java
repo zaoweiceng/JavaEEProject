@@ -21,7 +21,7 @@ public class Login extends HttpServlet {
         // 3 数据传递，并页面导航
         if(x == true){
             //数据传递，/管理员页面
-            response.sendRedirect("/index.jsp");
+            response.sendRedirect("/admin.jsp");
            // HttpSession session = request.getSession();
             //session.setAttribute("username", username);
             //response.sendRedirect(request.getContextPath()+"/ok.jsp");
@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
         else{
             //登录失败！
             request.setAttribute("error", "登录失败！");
-            request.getRequestDispatcher("/zhuce.jsp").forward(request, response);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
     }
 
