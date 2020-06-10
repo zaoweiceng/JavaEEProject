@@ -10,7 +10,7 @@ public interface userInfDao {
     @Select("select * from user_inf where idUser = #{id}")
     userInf findUserById(int id);
 
-    @Insert("insert into user_inf(realname, sex, birthday, tel, email) values(#{realname}, #{sex}, #{birthday}, #{tel}, #{email})")
+    @Insert("insert into user_inf(realname, sex, birthday, tel, email, pWd) values(#{realname}, #{sex}, #{birthday}, #{tel}, #{email}, #{pWd})")
     @Options(useGeneratedKeys=true, keyProperty="idUser", keyColumn="idUser")
     void insertInto(userInf user);
 

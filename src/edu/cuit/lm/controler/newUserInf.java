@@ -25,6 +25,7 @@ public class newUserInf extends HttpServlet {
         user.setEmail(request.getParameter("email"));
         user.setBirthday(new Date(request.getDateHeader("Birthday")));
 
+        System.out.println(user);
         // 2 调用业务，并获取业务数据
         //调用jdbc
         JDBCUtil  jdbc = new JDBCUtil();
@@ -33,7 +34,8 @@ public class newUserInf extends HttpServlet {
         // 3 数据传递，并页面导航
         if(x == true){
             request.setAttribute("YSE", "创建成功！");
-            response.sendRedirect("/user.jsp");
+            request.setAttribute("userid",user.getIdUser());
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
             //跳转页面；
             //数据传递，/用户页面
             // HttpSession session = request.getSession();
@@ -42,8 +44,8 @@ public class newUserInf extends HttpServlet {
         }
         else{
             //登录失败！
-            request.setAttribute("error", "登录失败！");
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
+            request.setAttribute("error", "创建失败！");
+            request.getRequestDispatcher("/add.jsp").forward(request, response);
         }
     }
 

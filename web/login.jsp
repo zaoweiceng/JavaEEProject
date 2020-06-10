@@ -13,16 +13,21 @@
             height:500px;
         }
         .login-wrapper{
-            border-style: solid;
+            border: 1px #0f0f0f solid;
             width: 250px;
             height: 350px;
-            background: #2aabd2;
+            background: rgba(123,157,245,0.4);
             text-align: center;
             margin-top: 200px;
             margin-left: 550px;
         }
         footer{
             text-align: center;
+            color: #0f0f0f;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;/*脚部的高度*/
         }
 
         A:link {
@@ -78,7 +83,7 @@
         </form>
     </div>
 </div>
-<footer>
+<footer style="position: fixed">
     <hr>
     Copyright by LongMengGroup
 </footer>

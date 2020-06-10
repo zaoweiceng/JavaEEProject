@@ -90,6 +90,7 @@
             return true;
         }
     </script>
+    <c:if test="&{}"></c:if>
 </head>
 <body>
 <header>
@@ -98,7 +99,7 @@
     <div class = "login-wrapper">
         <a href="login.jsp">首页</a>
         <hr>
-        <form action="login.jsp" name = "form1" method ="post">
+        <form action="${pageContext.request.contextPath}/newUserInf" name = "form1" method ="post">
             用 户 名：<br>
             <INPUT id=UserName onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" name="name"><INPUT id=act1 type=hidden value=cool name=act1>
             <br>
