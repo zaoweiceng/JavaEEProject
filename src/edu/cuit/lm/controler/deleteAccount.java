@@ -28,7 +28,7 @@ public class deleteAccount extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
         //1.接受参数
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id").trim());
         JDBCUtil jd = new JDBCUtil();
         jd.delAccount(id);
         //3.跳转

@@ -38,7 +38,7 @@ public class addNewAccout extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
         account ac = new account();
-        ac.setId(Integer.parseInt(request.getParameter("id")));
+        ac.setId(Integer.parseInt(request.getParameter("id").trim()));
         ac.setIdUser(request.getParameter("idUser"));
         ac.setIdPwd(request.getIntHeader("pass"));
         ac.setIdWeb(request.getParameter("web"));

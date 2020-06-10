@@ -36,7 +36,7 @@ public class findPassWord extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id").trim());
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
 

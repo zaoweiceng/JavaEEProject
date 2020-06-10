@@ -37,7 +37,7 @@ public class deleteUser_manage extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
         //1.接受参数
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id").trim());
         //2.删除User
         JDBCUtil jd = new JDBCUtil();
         jd.delUser(id);
