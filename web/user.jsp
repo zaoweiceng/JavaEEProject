@@ -98,11 +98,11 @@
         <table border="1" cellspacing="0" width="800px">
             <caption>账号界面</caption>
             <tr>
-                <th width="200px">用户id</th>
                 <th>用户名</th>
                 <th>用户web</th>
                 <th>注册日期</th>
                 <th>密码</th>
+                <th>备注</th>
                 <th>操作</th>
             </tr>
             <c:forEach items="${userSawList}" varStatus="s" var="us">

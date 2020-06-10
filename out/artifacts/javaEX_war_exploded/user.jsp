@@ -61,6 +61,11 @@
                 return false;
             }
         }
+        function deleteUser(id, web) {
+            if (confirm("确定删除此记录吗？")) {
+                location.href = "${pageContext.request.contextPath}/deleteAccount?id=" + id + "&web=" +web
+            }
+        }
     </script>
 </head>
 <body>
@@ -71,35 +76,33 @@
 <div id="all">
     <hr>
     <div id="use">
-        <form id="mages" name="mages" action="${pageContext.request.contextPath}/" method="post">
+        <form id="mages" name="mages" action="${pageContext.request.contextPath}" method="post">
         <p>个人信息 </p>
-        <h>用户ID:</h>
+        <h>用户ID: ${userinf_name.idUser}</h>
         <br>
-        <h>用户名：</h>
+        <h>用户名：${userinf_name.realname}</h>
         <br>
-        <h>密 码:</h>
+        <h>性 别：${userinf_name.sex}</h>
         <br>
-        <h>性 别：</h>
+        <h>生 日：${userinf_name.birthday.year+1900}-${userinf_name.birthday.month+1}-${userinf_name.birthday.date}</h>
         <br>
-        <h>生 日：</h>
+        <h>电 话：${userinf_name.tel}</h>
         <br>
-        <h>电 话：</h>
-        <br>
-        <h>email :</h>
+        <h>email :${userinf_name.email}</h>
         <br>
         </form>
     </div>
     <div id="table">
         <hr>
-        <form id="mainTable" name="mainTable" action="${pageContext.request.contextPath}/" method="post">
+        <form id="mainTable" name="mainTable"  method="post">
         <table border="1" cellspacing="0" width="800px">
             <caption>账号界面</caption>
             <tr>
-                <th width="200px">用户id</th>
                 <th>用户名</th>
                 <th>用户web</th>
                 <th>注册日期</th>
                 <th>密码</th>
+                <th>备注</th>
                 <th>操作</th>
             </tr>
             <c:forEach items="${userSawList}" varStatus="s" var="us">
@@ -110,7 +113,7 @@
                         <td><input id="idDate" name="idDate" value="${us.idDate}"></td>
                         <td><input id="password" name="password" value="${us.password}"></td>
                         <td><input id="note" name="note" value="${us.note}"></td>
-                        <td><a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.idUser})">删除</a></td>
+                        <td><a class="btn btn-default btn-sm" onclick="deleteUser(${us.idUser}, ${us.idWeb})" >删除</a></td>
                         <td><a class="btn btn-default btn-sm" type="submit">修改</a></td>
                     </form>
                 </tr>
