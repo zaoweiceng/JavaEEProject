@@ -45,7 +45,7 @@ public class findIdUserByName_manage extends HttpServlet {
 
         request.setAttribute("list_findIdUserByName_manage", list_findIdUserByName_manage);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("/admin.jsp");
+        request.getRequestDispatcher("/admin.jsp").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -55,7 +55,7 @@ public class changeAccount extends HttpServlet {
         jd.updateAccount(ac);
         //3.跳转
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("showUser");
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

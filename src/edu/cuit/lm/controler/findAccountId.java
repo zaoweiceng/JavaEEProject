@@ -42,9 +42,9 @@ public class findAccountId extends HttpServlet {
         List<account> account = jd.findAccountById(id);
 
         //3.跳转
-        response.sendRedirect(String.valueOf(account));
+        request.setAttribute("account", account);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("showUser");
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -41,11 +41,9 @@ public class deleteUser_manage extends HttpServlet {
         //2.删除User
         JDBCUtil jd = new JDBCUtil();
         jd.delUser(id);
-        List<userInf> list_deleteUser_manage = jd.findUserAll();
         //3.跳转
-        request.setAttribute("list_deleteUser_manage", list_deleteUser_manage);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("/admin.jsp");
+        request.getRequestDispatcher("/findAll").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

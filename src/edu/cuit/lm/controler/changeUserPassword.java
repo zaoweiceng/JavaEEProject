@@ -50,7 +50,7 @@ public class changeUserPassword extends HttpServlet {
         //3.跳转
         request.setAttribute("list_changeUserPassword", list_changeUserPassword);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("/user.jsp");
+        request.getRequestDispatcher("/user.jsp").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

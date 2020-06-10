@@ -51,7 +51,7 @@ public class addNewAccout extends HttpServlet {
 
         request.setAttribute("findIdUserByName_manage_get", list);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("/admin.jsp");
+        request.getRequestDispatcher("/admin.jsp").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

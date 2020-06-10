@@ -39,11 +39,12 @@ public class findAccountByName extends HttpServlet {
         String name = request.getParameter("name");
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
-        jd.findAccountByName(name);
+        List<account> list_findAccountByName = jd.findAccountByName(name);
 
         //3.跳转
+        request.setAttribute("list_findAccountByName", list_findAccountByName);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("showUser");
+        request.getRequestDispatcher("/admin.jsp").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

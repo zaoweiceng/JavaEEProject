@@ -45,8 +45,7 @@ public class findUserById_manage extends HttpServlet {
 
         request.setAttribute("user_findIdUserById_manage", user);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("/admin.jsp");
-
+        request.getRequestDispatcher("/admin.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
