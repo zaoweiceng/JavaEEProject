@@ -115,4 +115,12 @@ public class JDBCUtil {
         a.setIdWeb(web);
         return daoImp.getAccount().findAccountByWebAndId(a);
     }
+
+    public List<userInf> findUserAll(){
+        List<userInf> all = daoImp.getUserInf().findAll();
+        for (userInf user : all) {
+            user.setpWd(null);
+        }
+        return all;
+    }
 }

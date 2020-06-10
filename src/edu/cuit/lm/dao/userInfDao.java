@@ -22,4 +22,7 @@ public interface userInfDao {
 
     @Select("select * from user_inf where realname like #{name}")
     List<userInf> findUserByName(String name);
+
+    @Select("select * from user_inf")
+    List<userInf> findAll();
 }
