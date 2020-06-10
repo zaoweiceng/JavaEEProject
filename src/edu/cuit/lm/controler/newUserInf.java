@@ -33,6 +33,8 @@ public class newUserInf extends HttpServlet {
         // 3 数据传递，并页面导航
         if(x == true){
             request.setAttribute("YSE", "创建成功！");
+            request.setAttribute("userid", user.getIdUser());
+            System.out.println(user.getIdUser());
             request.getRequestDispatcher("/login.jsp").forward(request, response);
             //跳转页面；
             //数据传递，/用户页面
