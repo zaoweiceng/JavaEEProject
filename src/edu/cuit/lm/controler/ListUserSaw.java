@@ -41,8 +41,10 @@ public class ListUserSaw extends HttpServlet {
         userInf us = new userInf();
         us.setIdUser(ac.getId());
         JDBCUtil jd = new JDBCUtil();
+        userInf userinf_name = jd.findUserInfById(ac.getId());
 
         //3.跳转
+        request.setAttribute("userinf_name", userinf_name);
         request.setAttribute("userSawList", List_UserSaw);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/user.jsp").forward(request, response);
