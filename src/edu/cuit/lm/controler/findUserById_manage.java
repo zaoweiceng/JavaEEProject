@@ -21,14 +21,14 @@ import java.util.List;
 /**
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/findIdUserByName_manage"})
-public class findIdUserByName_manage extends HttpServlet {
+@WebServlet({ "/findIdUserById_manage"})
+public class findUserById_manage extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public findIdUserByName_manage(){
+    public findUserById_manage(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,14 +36,14 @@ public class findIdUserByName_manage extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
-        String name = request.getParameter("name");
+        int id = Integer.parseInt(request.getParameter("id").trim());
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
-        List<userInf> list_findIdUserByName_manage = jd.findUserByName(name);
+        userInf user = jd.findUserInfById(id);
 
         //3.跳转
 
-        request.setAttribute("list_findIdUserByName_manage", list_findIdUserByName_manage);
+        request.setAttribute("user_findIdUserById_manage", user);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         response.sendRedirect("/admin.jsp");
 

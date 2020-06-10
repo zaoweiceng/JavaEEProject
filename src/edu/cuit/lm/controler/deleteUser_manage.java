@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/dleteUser"})
+@WebServlet({ "/deleteUser_manage"})
 public class deleteUser_manage extends HttpServlet {
     private static final long serialVersionUID =1L;
 
@@ -41,9 +41,9 @@ public class deleteUser_manage extends HttpServlet {
         //2.删除User
         JDBCUtil jd = new JDBCUtil();
         jd.delUser(id);
-        List<userInf> List_manage = jd.findUserAll();
+        List<userInf> list_deleteUser_manage = jd.findUserAll();
         //3.跳转
-        request.setAttribute("findIdUserByName_manage_get", List_manage);
+        request.setAttribute("list_deleteUser_manage", list_deleteUser_manage);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         response.sendRedirect("/admin.jsp");
 

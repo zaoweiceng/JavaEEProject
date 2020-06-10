@@ -47,6 +47,7 @@ public class changeUserPassword_manage extends HttpServlet {
         jd.updateUserInf(user);
         List<userInf> list_changeUserPassword_manage = jd.findUserAll();
 
+
         //3.跳转
         request.setAttribute("list_changeUserPassword_manage", list_changeUserPassword_manage);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
