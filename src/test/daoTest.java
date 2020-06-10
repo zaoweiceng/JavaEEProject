@@ -22,19 +22,31 @@ import java.util.Date;
 import java.util.List;
 
 public class daoTest {
-    private InputStream in;
-    private SqlSessionFactoryBuilder builder;
-    private SqlSessionFactory factory;
-    private SqlSession sqlSession;
+    private static InputStream in;
+    private static SqlSessionFactoryBuilder builder;
+    private static SqlSessionFactory factory;
+    private static SqlSession sqlSession;
 
     @Before
-    public void init() throws IOException {
+    public static void init() throws IOException {
         in =  Resources.getResourceAsStream("mybatisConf.xml");
         builder =  new SqlSessionFactoryBuilder();
         factory  = builder.build(in);
         sqlSession = factory.openSession();
     }
 
+
+    public static void main(String[] args) throws IOException {
+        in =  Resources.getResourceAsStream("mybatisConf.xml");
+        builder =  new SqlSessionFactoryBuilder();
+        factory  = builder.build(in);
+        sqlSession = factory.openSession();
+        accountDao mapper = sqlSession.getMapper(accountDao.class);
+        List<account> all = mapper.findAll();
+        for (account account : all) {
+            System.out.println(account);
+        }
+    }
 
     @Test
     public void test(){
