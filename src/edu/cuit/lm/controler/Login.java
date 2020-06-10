@@ -26,16 +26,16 @@ public class Login extends HttpServlet {
         // 3 数据传递，并页面导航
         if(x == 2){
             //数据传递，/管理员页面
-            List<userInf> list_Login = jd.findUserAll();
-            request.setAttribute("list_Login", list_Login);
-            response.sendRedirect("/admin.jsp");
+            userInf userInfById = jd.findUserInfById(id);
+            request.setAttribute("username", userInfById.getRealname());
+            request.getRequestDispatcher("findAll").forward(request, response);
            // HttpSession session = request.getSession();
             //session.setAttribute("username", username);
             //response.sendRedirect(request.getContextPath()+"/ok.jsp");
         }else if(x == 1){
             List<account> list_Login = jd.findAccountById(id);
             request.setAttribute("list_Login2", list_Login);
-            response.sendRedirect("/user.jsp");
+            request.getRequestDispatcher("/admin.jsp").forward(request, response);
             //用户页面；
         }
         else{

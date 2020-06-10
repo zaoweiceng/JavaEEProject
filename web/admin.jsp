@@ -64,7 +64,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <c:if test="${user.username != null}">
+            <c:if test="${username != null}">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="${pageContext.request.contextPath}/findIdUserByName?curPage=1&rows=5">用户信息</a></li>
                     <li><a href="${pageContext.request.contextPath}/findNote?t_curPage=1&t_rows=12">备忘录</a></li>
@@ -72,11 +72,11 @@
             </c:if>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <c:if test="${user.username == null || user.username == ''}">
+                    <c:if test="${username == null || username == ''}">
                     <a href="login.jsp">请登录</a>
                     </c:if>
-                    <c:if test="${user.username != null}">
-                    <a>${user.username}, 欢迎您！</a>
+                    <c:if test="${username != null}">
+                    <a>${username}, 欢迎您！</a>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -107,14 +107,11 @@
             </form>
         </div>
         <div style="float: right; margin-bottom: 5px">
-            <a colspan="8" class="btn btn-primary" href="${pageContext.request.contextPath}/findAccountId?rows=5&curPage=
-            ${page.curPage}&web=${id_inf.idWeb}&name=${user_inf.idUser}">刷新</a>
-            <a colspan="8" class="btn btn-primary" href="javascript:void(0);" id="delSelected">删除选中</a>
+            <a colspan="8" class="btn btn-primary" href="/findAll">刷新</a>
         </div>
         <form id="mainTable" name="mainTable" action="${pageContext.request.contextPath}/deleteUser" method="post">
             <table border="1" class="table table-bordered table-hover">
                 <tr class="success">
-                    <th><input type="checkbox" id="firstCK" name="firstCK"></th>
                     <td>账号</td>
                     <td>姓名</td>
                     <td>性别</td>
@@ -123,18 +120,16 @@
                     <td>邮箱</td>
                     <td>操作</td>
                 </tr>
-                <c:forEach items="${list_Login.list}" var="us" varStatus="s">
+                <c:forEach items="${list_Login}" var="us" varStatus="s">
                     <tr>
-                        <th><input type="checkbox" name="delId" id="delId" value="${us.id}"></th>
                         <td>${us.idUser}</td>
                         <td>${us.realname}</td>
                         <td>${us.sex}</td>
                         <td>${us.birthday}</td>
                         <td>${us.tel}</td>
                         <td>${us.email}</td>
-                        <td><a class="btn btn-default btn-sm"
-                               href="${pageContext.request.contextPath}/findUser?id=${us.id}&web=${id_inf.idWeb}&name=${user_inf.idUser}">修改</a>&nbsp;
-                            <a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.id})">删除</a></td>
+                        <td>
+                            <a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.idUser})">删除</a></td>
                     </tr>
                 </c:forEach>
             </table>
