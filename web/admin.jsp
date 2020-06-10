@@ -125,7 +125,7 @@
                         <td>${us.idUser}</td>
                         <td>${us.realname}</td>
                         <td>${us.sex}</td>
-                        <td>${us.birthday}</td>
+                        <td>${us.birthday.year+1900}-${us.birthday.month+1}-${us.birthday.date}</td>
                         <td>${us.tel}</td>
                         <td>${us.email}</td>
                         <td>
