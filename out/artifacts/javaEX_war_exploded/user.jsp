@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,34 +12,44 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
-        p{
+
+        p {
             text-align: center;
             font-size: 18px;
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
 
-        footer{
+        footer {
             color: #761c19;
             text-align: center;
         }
-        table {margin: 0 auto;}
-        #use{
-            height:200px;
+
+        table {
+            margin: 0 auto;
         }
-        #table{
-            height:400px;
+
+        #use {
+            height: 200px;
         }
-        table{
+
+        #table {
+            height: 400px;
+        }
+
+        table {
             background: #2aabd2;
         }
-        a{
-            　float:left;
+
+        a {
+            　float: left;
             color: #761c19;
             font-size: 16px;
         }
-        caption{
+
+        caption {
             font-size: 18px;
         }
     </style>
@@ -52,91 +63,60 @@
         }
     </script>
 </head>
-<body >
+<body>
 <header>
     <a href="login.jsp" onclick="logout()">返回登录</a>
     <h2>用户界面</h2>
 </header>
-<div id = "all">
+<div id="all">
     <hr>
-    <div id = "use">
+    <div id="use">
+        <form id="mages" name="mages" action="${pageContext.request.contextPath}/" method="post">
         <p>个人信息 </p>
-        <h>用户ID: </h>  <br>
-        <h>用户名：</h><br>
-        <h>密  码: </h><br>
-        <h>性  别：</h>  <br>
-        <h>生  日：</h> <br>
-        <h>电  话：</h> <br>
-        <h>email : </h> <br>
+        <h>用户ID:</h>
+        <br>
+        <h>用户名：</h>
+        <br>
+        <h>密 码:</h>
+        <br>
+        <h>性 别：</h>
+        <br>
+        <h>生 日：</h>
+        <br>
+        <h>电 话：</h>
+        <br>
+        <h>email :</h>
+        <br>
+        </form>
     </div>
-    <div id = "table">
+    <div id="table">
         <hr>
-        <table border="1" cellspacing="0" width = "800px">
-            <caption >账号界面</caption>
+        <form id="mainTable" name="mainTable" action="${pageContext.request.contextPath}/" method="post">
+        <table border="1" cellspacing="0" width="800px">
+            <caption>账号界面</caption>
             <tr>
-                <th width = "200px">用户id</th>
+                <th width="200px">用户id</th>
                 <th>用户名</th>
                 <th>用户web</th>
                 <th>注册日期</th>
                 <th>密码</th>
+                <th>操作</th>
             </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>1123</td>
-            </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>123456</td>
-            </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>123456</td>
-            </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>123456</td>
-            </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>123456</td>
-            </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>1233456</td>
-            </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>123456</td>
-            </tr>
-            <tr>
-                <td>123434</td>
-                <td>losid</td>
-                <td>哔哩哔哩</td>
-                <td>iddata</td>
-                <td>123456</td>
-            </tr>
+            <c:forEach items="${userSawList}" varStatus="s" var="us">
+                <tr>
+                    <form action="${pageContext.request.contextPath}/changeAccountName" method="post">
+                        <td><input id="idUser" name="idUser" value="${us.idUser}" disabled></td>
+                        <td><input id="idWeb" name="idWeb" value="${us.idWeb}"></td>
+                        <td><input id="idDate" name="idDate" value="${us.idDate}"></td>
+                        <td><input id="password" name="password" value="${us.password}"></td>
+                        <td><input id="note" name="note" value="${us.note}"></td>
+                        <td><a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.idUser})">删除</a></td>
+                        <td><a class="btn btn-default btn-sm" type="submit">修改</a></td>
+                    </form>
+                </tr>
+            </c:forEach>
         </table>
+        </form>
     </div>
 
 </div>

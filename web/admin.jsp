@@ -107,7 +107,6 @@
             </form>
         </div>
         <div style="float: right; margin-bottom: 5px">
-
             <a colspan="8" class="btn btn-primary" href="/findAll">刷新</a>
         </div>
         <form id="mainTable" name="mainTable" action="${pageContext.request.contextPath}/deleteUser" method="post">

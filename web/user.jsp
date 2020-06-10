@@ -71,6 +71,7 @@
 <div id="all">
     <hr>
     <div id="use">
+        <form id="mages" name="mages" action="${pageContext.request.contextPath}/" method="post">
         <p>个人信息 </p>
         <h>用户ID:</h>
         <br>
@@ -86,9 +87,11 @@
         <br>
         <h>email :</h>
         <br>
+        </form>
     </div>
     <div id="table">
         <hr>
+        <form id="mainTable" name="mainTable" action="${pageContext.request.contextPath}/" method="post">
         <table border="1" cellspacing="0" width="800px">
             <caption>账号界面</caption>
             <tr>
@@ -97,17 +100,23 @@
                 <th>用户web</th>
                 <th>注册日期</th>
                 <th>密码</th>
+                <th>操作</th>
             </tr>
-            <c:forEach items="userSawList" varStatus="s" var="us">
+            <c:forEach items="${userSawList}" varStatus="s" var="us">
                 <tr>
-                    <td><input value="${us.idUser}" disabled></td>
-                    <td><input value="${us.idWeb}"></td>
-                    <td><input value="${us.idDate}"></td>
-                    <td><input value="${us.password}"></td>
-                    <td><input value="${us.note}"></td>
+                    <form action="${pageContext.request.contextPath}/changeAccountName" method="post">
+                        <td><input id="idUser" name="idUser" value="${us.idUser}" disabled></td>
+                        <td><input id="idWeb" name="idWeb" value="${us.idWeb}"></td>
+                        <td><input id="idDate" name="idDate" value="${us.idDate}"></td>
+                        <td><input id="password" name="password" value="${us.password}"></td>
+                        <td><input id="note" name="note" value="${us.note}"></td>
+                        <td><a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.idUser})">删除</a></td>
+                        <td><a class="btn btn-default btn-sm" type="submit">修改</a></td>
+                    </form>
                 </tr>
             </c:forEach>
         </table>
+        </form>
     </div>
 
 </div>

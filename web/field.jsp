@@ -23,6 +23,11 @@
         }
         footer{
             text-align: center;
+            color: #0f0f0f;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;/*脚部的高度*/
         }
         A:link {
             COLOR: #262626; TEXT-DECORATION: none
