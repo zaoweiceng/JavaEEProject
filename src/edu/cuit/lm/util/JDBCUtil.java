@@ -42,6 +42,12 @@ public class JDBCUtil {
         daoImp.getUserInf().delUserById(id);
         close();
     }
+
+    public void delAccountByIdAndByWeb(account a) throws IOException {
+        daoImp.getAccount().delAccountByWebAndById(a);
+        close();
+    }
+
     public void delAccount(int id) throws IOException {
         List<account> accountById = daoImp.getAccount().findAccountById(id);
         for (account a : accountById) {

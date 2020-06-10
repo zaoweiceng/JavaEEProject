@@ -37,6 +37,9 @@ public interface accountDao {
     @Delete("delete from id_inf where id = #{id}")
     void delAccountById(int id);
 
+    @Delete("delete from id_inf where id = #{id} and idWeb = #{idWeb}")
+    void delAccountByWebAndById(account a);
+
     @Update("update id_inf set idUser = #{idUser}, idWeb = #{idWeb}, idDate = #{idDate}, idPwd = #{idPwd} where id = #{id}")
     void updateById(account a);
 
