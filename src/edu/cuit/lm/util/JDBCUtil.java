@@ -12,7 +12,6 @@ import java.util.List;
 public class JDBCUtil {
     public void close() throws IOException {
         DBUtil.commit();
-        DBUtil.close();
     }
 
     public boolean addAcount(account a) throws IOException {
@@ -39,11 +38,8 @@ public class JDBCUtil {
     }
 
     public void delUser(int id) throws IOException {
-        List<account> accountById = daoImp.getAccount().findAccountById(id);
-        for (account a : accountById) {
-            daoImp.getPassword().delPwdById(a.getIdPwd());
-            daoImp.getAccount().delAccountById(a.getId());
-        }
+        daoImp.getUserPri().delUserById(id);
+        daoImp.getUserInf().delUserById(id);
         close();
     }
     public void delAccount(int id) throws IOException {
