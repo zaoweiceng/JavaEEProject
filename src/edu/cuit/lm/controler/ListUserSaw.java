@@ -2,6 +2,7 @@ package edu.cuit.lm.controler;
 
 
 import edu.cuit.lm.entity.account;
+import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userSaw;
 import edu.cuit.lm.util.JDBCUtil;
@@ -42,6 +43,11 @@ public class ListUserSaw extends HttpServlet {
         us.setIdUser(ac.getId());
         JDBCUtil jd = new JDBCUtil();
         userInf userinf_name = jd.findUserInfById(ac.getId());
+        password ps = new password();
+        ps.setPassword(userinf_name.getpWd());
+        pa.unzip(ps);
+        userinf_name.setpWd(ps.getPassword());
+
 
         //3.跳转
         request.setAttribute("userinf_name", userinf_name);
