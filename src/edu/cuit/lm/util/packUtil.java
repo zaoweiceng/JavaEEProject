@@ -44,34 +44,30 @@ public class packUtil {
 
     @Test
     public void zp(){
-        List<account> all = daoImp.getAccount().findAll();
-        for (account a : all) {
-            password pwdById = daoImp.getPassword().findPwdById(a.getIdPwd());
-            zip(pwdById);
-            daoImp.getPassword().updateById(pwdById);
+        List<password> all = daoImp.getPassword().findAll();
+        for (password p : all) {
+            zip(p);
+            daoImp.getPassword().updateById(p);
         }
         DBUtil.commit();
     }
 
     @Test
     public void up(){
-        List<account> all = daoImp.getAccount().findAll();
-        for (account a : all) {
-            password pwdById = daoImp.getPassword().findPwdById(a.getIdPwd());
-            unzip(pwdById);
-            System.out.println(pwdById);
+        List<password> all = daoImp.getPassword().findAll();
+        for (password p : all) {
+            unzip(p);
+            System.out.println(p);
         }
-        //DBUtil.commit();
     }
 
     public void zip(password pwd){
         double random = Math.random();
         random *= 10;
-        pwd.setPwdCheck(random);
+        int n = (int)random;
+        pwd.setPwdCheck((double)n);
         String password = pwd.getPassword();
         String p1 = "";
-        pwd.setPwdCheck(random);
-        int n = (int)random;
         char[] chars = password.toCharArray();
         int flag = 0;
         for (char aChar : chars) {
