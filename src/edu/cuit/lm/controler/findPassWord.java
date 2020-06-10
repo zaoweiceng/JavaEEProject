@@ -47,6 +47,7 @@ public class findPassWord extends HttpServlet {
         jd.addAcount(ac);
 
 
+
         //3.跳转
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         response.sendRedirect("showUser");

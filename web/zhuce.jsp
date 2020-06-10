@@ -25,7 +25,7 @@
 <DIV id=Container>
 <DIV id=PageBody>
 <DIV class=Sidebar>
-<FORM name="form1" action="login.jsp" method="post">
+<FORM name="form1" action="${pageContext.request.contextPath}/newUserInf" method="post">
 <UL>
 	<LI><LABEL>用  户 名：<INPUT id=UserName onblur="this.className='input_onBlur'" 
   onfocus="this.className='input_onFocus'" name="name"><INPUT id=act 

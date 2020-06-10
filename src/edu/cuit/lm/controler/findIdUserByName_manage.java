@@ -21,14 +21,14 @@ import java.util.List;
 /**
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/findAccountId"})
-public class findAccountId extends HttpServlet {
+@WebServlet({ "/findIdUserByName_manage"})
+public class findIdUserByName_manage extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public findAccountId(){
+    public findIdUserByName_manage(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,15 +36,16 @@ public class findAccountId extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
-        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
-        List<account> account = jd.findAccountById(id);
+        List<userInf> List = jd.findUserByName(name);
 
         //3.跳转
-        response.sendRedirect(String.valueOf(account));
+
+        request.setAttribute("findIdUserByName_manage_get", List);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
-        response.sendRedirect("showUser");
+        response.sendRedirect("/admin.jsp");
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,4 +53,3 @@ public class findAccountId extends HttpServlet {
         doGet(request, response);
     }
 }
-

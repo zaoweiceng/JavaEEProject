@@ -21,14 +21,14 @@ import java.util.List;
 /**
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/findAccountId"})
-public class findAccountId extends HttpServlet {
+@WebServlet({ "/changeUserPassword"})
+public class changeUserPassword extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public findAccountId(){
+    public changeUserPassword(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,12 +37,16 @@ public class findAccountId extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
         int id = Integer.parseInt(request.getParameter("id"));
-        //2.函数，查找函数
+        //获取新密码
+        String pass = request.getParameter("pass");
+        //2.函数，修改函数/修改idUser
         JDBCUtil jd = new JDBCUtil();
-        List<account> account = jd.findAccountById(id);
+        userInf user = new userInf();
+        user.setIdUser(id);
+        user.setpWd(pass);
+        jd.updateUserInf(user);
 
         //3.跳转
-        response.sendRedirect(String.valueOf(account));
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         response.sendRedirect("showUser");
 

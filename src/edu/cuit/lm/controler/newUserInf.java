@@ -1,5 +1,6 @@
 package edu.cuit.lm.controler;
 
+import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.util.JDBCUtil;
 
@@ -17,19 +18,18 @@ public class newUserInf extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
         // 1 接收请求，并获取请求参数
         userInf user = new userInf();
-        String idUser;
-        user.setIdUser(request.getIntHeader("idUser"));
-        user.setRealname(request.getParameter("Realname"));
-        user.setpWd(request.getParameter("pWd"));
+        user.setRealname(request.getParameter("name"));
+        user.setpWd(request.getParameter("pass1"));
         user.setSex(request.getParameter("Sex"));
-        user.setTel(request.getParameter("Tel"));
-        user.setEmail(request.getParameter("Email"));
+        user.setTel(request.getParameter("phone"));
+        user.setEmail(request.getParameter("email"));
         user.setBirthday(new Date(request.getDateHeader("Birthday")));
 
         // 2 调用业务，并获取业务数据
         //调用jdbc
         JDBCUtil  jdbc = new JDBCUtil();
         boolean x = jdbc.addUser(user);
+
         // 3 数据传递，并页面导航
         if(x == true){
             request.setAttribute("YSE", "创建成功！");
