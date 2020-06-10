@@ -35,9 +35,10 @@ public class Login extends HttpServlet {
             //response.sendRedirect(request.getContextPath()+"/ok.jsp");
         }else if(x == 2){
             //普通用户
-            List<account> list_Login = jd.findAccountById(id);
-            request.setAttribute("list_Login2", list_Login);
-            request.getRequestDispatcher("/User.jsp").forward(request, response);
+            account ac = new account();
+            ac.setId(id);
+            request.setAttribute("account_id", ac);
+            request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
             //用户页面；
         }
         else{
