@@ -17,15 +17,15 @@ public class Login extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("name").trim());
         String pass = request.getParameter("pass");
         // 2 调用业务，并获取业务数据
-        boolean x = logInUtil.check(id, pass);
+        int x = logInUtil.check(id, pass);
         // 3 数据传递，并页面导航
-        if(x == true){
+        if(x == 2){
             //数据传递，/管理员页面
-            response.sendRedirect("/index.jsp");
+            response.sendRedirect("/admin.jsp");
            // HttpSession session = request.getSession();
             //session.setAttribute("username", username);
             //response.sendRedirect(request.getContextPath()+"/ok.jsp");
-        }else if(x == false){
+        }else if(x == 1){
             request.setAttribute("error", "登录失败！");
             response.sendRedirect("/zhuce.jsp");
             //用户页面；
