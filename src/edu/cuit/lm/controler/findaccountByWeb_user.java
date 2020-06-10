@@ -30,7 +30,7 @@ public class findaccountByWeb_user extends HttpServlet {
             ServletException, IOException {
         //1.接受参数
         int id = Integer.parseInt(request.getParameter("id").trim());
-        String web = request.getParameter("pwd");
+        String web = request.getParameter("web");
         JDBCUtil jd = new JDBCUtil();
         //删除一条消息；
 
