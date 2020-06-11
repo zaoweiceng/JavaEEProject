@@ -16,14 +16,18 @@
             border-style: solid;
             width: 250px;
             height: 350px;
-            background: #5bc0de;
+            background: rgba(123,157,245,0.4);
             text-align: center;
             margin-top: 10%;
             margin-left: 40%;
         }
         footer{
-            margin-top: 10%;
             text-align: center;
+            color: #0f0f0f;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;/*脚部的高度*/
         }
         A:link {
             COLOR: #262626; TEXT-DECORATION: none

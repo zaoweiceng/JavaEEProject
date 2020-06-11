@@ -17,13 +17,18 @@
         border-style: solid;
         width: 250px;
         height: 380px;
-        background: #2aabd2;
+        background: rgba(123,157,245,0.4);
         text-align: center;
         margin-top: 200px;
         margin-left: 550px;
         }
         footer{
-        text-align: center;
+            text-align: center;
+            color: #0f0f0f;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;/*脚部的高度*/
         }
 
         A:link {
@@ -44,7 +49,7 @@
         {
             var form=document.form1;
             if (form.UserName.value==='')
-            { alert("请输入用户名!");
+            { alert("请输入姓名!");
                 form.UserName.focus();
                 return false;
             }
@@ -101,14 +106,14 @@
         <a href="login.jsp">首页</a>
         <hr>
         <form action="${pageContext.request.contextPath}/newUserInf" name = "form1" method ="post">
-            用 户 名：<br>
-            <INPUT id=UserName onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" name="name"><INPUT id=act1 type=hidden value=cool name=act1>
-            <br>
             密    码：<br>
             <INPUT id=Password onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=password name="pass1">
             <br>
             确认密码：<br>
             <INPUT id=UserNew onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=password name="pass2">
+            <br>
+            姓    名：<br>
+            <INPUT id=UserName onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" name="name"><INPUT id=act1 type=hidden value=cool name=act1>
             <br>
             性    别：<br>
             <INPUT id=UserSex onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" name="Sex"><INPUT id=act2 type=hidden value=cool name=act2>

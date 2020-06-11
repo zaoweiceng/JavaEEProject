@@ -16,7 +16,7 @@
             border-style: solid;
             width: 250px;
             height: 250px;
-            background: #2aabd2;
+            background: rgba(123,157,245,0.4);
             text-align: center;
             margin-top: 200px;
             margin-left: 550px;
@@ -52,7 +52,7 @@
         <hr>
         <form action="" name = "form1" method ="post">
             <br><br> <br>
-              <h2>登录失败</h2>
+              <h2>登录失败，账号或密码错误</h2>
         </form>
     </div>
 </div>
