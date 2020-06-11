@@ -23,7 +23,7 @@
         }
 
         footer {
-            color: #761c19;
+            color: #0f0f0f;
             text-align: center;
         }
 
@@ -66,6 +66,11 @@
                 location.href = "${pageContext.request.contextPath}/deleteAccount?id=" + id + "&web=" +web
             }
         }
+        function look(id, web) {
+            if (confirm("查看密码")){
+                location.href = "${pageContext.request.contextPath}/findWebIdUser?id=" + id + "&web=" +web
+            }
+        }
     </script>
 </head>
 <body>
@@ -101,18 +106,17 @@
                 <th>用户名</th>
                 <th>用户web</th>
                 <th>注册日期</th>
-                <th>密码</th>
                 <th>备注</th>
                 <th>操作</th>
             </tr>
             <c:forEach items="${userSawList}" varStatus="s" var="us">
                 <tr>
-                    <form action="${pageContext.request.contextPath}/changeAccountName" method="post">
+                    <form action=${pageContext.request.contextPath}/changeAccountName method="post">
                         <td><input id="idUser" name="idUser" value="${us.idUser}" disabled></td>
                         <td><input id="idWeb" name="idWeb" value="${us.idWeb}"></td>
                         <td><input id="idDate" name="idDate" value="${us.idDate}"></td>
-                        <td><input id="password" name="password" value="${us.password}"></td>
                         <td><input id="note" name="note" value="${us.note}"></td>
+                        <td><a class="btn btn-default btn-sm" onclick="look(${us.idUser}, ${us.idWeb})" >查看密码</a></td>
                         <td><a class="btn btn-default btn-sm" onclick="deleteUser(${us.idUser}, ${us.idWeb})" >删除</a></td>
                         <td><a class="btn btn-default btn-sm" type="submit">修改</a></td>
                     </form>
