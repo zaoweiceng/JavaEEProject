@@ -54,6 +54,16 @@ public class packUtil {
         DBUtil.commit();
     }
 
+    public static void main(String[] args) {
+        packUtil pk = new packUtil();
+        List<password> all = daoImp.getPassword().findAll();
+        for (password p : all) {
+            pk.zip(p);
+            daoImp.getPassword().updateById(p);
+        }
+        DBUtil.commit();
+    }
+
     @Test
     public void up(){
         List<password> all = daoImp.getPassword().findAll();
