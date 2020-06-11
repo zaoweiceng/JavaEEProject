@@ -117,7 +117,7 @@
                         <td><input id="idDate" name="idDate" value="${us.idDate.year+1900}-${us.idDate.month+1}-${us.idDate.date}"></td>
                         <td><input id="note" name="note" value="${us.note}"></td>
                         <td><a href="${pageContext.request.contextPath}/findWebId_user?web=${us.idWeb}" target="_blank">查看密码</a></td>
-                        <td><<a href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}" >删除</a></td>
+                        <td><a href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}"> 删除</a></td>
                         <td><button class="btn btn-default btn-sm" type="submit">修改</button></td>
                     </form>
                 </tr>

@@ -14,6 +14,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" href="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" href="js/bootstrap.js"></script>
     <title>管理员界面</title>
     <script>
         function deleteUser(id) {
@@ -69,11 +71,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <c:if test="${username != null}">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="${pageContext.request.contextPath}/manageTurnToUser" target="_blank">个人信息</a></li>
-                </ul>
-            </c:if>
+
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <c:if test="${username == null || username == ''}">
@@ -81,19 +79,15 @@
                     </c:if>
                     <c:if test="${username != null}">
                     <a>${username}管理员, 欢迎您！</a>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">个人中心 <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="${pageContext.request.contextPath}/manageTurnToUser" target="_blank">个人信息</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="${pageContext.request.contextPath}/logOut">退出登录</a></li>
-                    </ul>
-                </li>
                 </c:if>
+
                 </li>
             </ul>
+            <c:if test="${username != null}">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="${pageContext.request.contextPath}/manageTurnToUser" target="_blank">个人信息</a></li>
+                </ul>
+            </c:if>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

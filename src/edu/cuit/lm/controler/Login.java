@@ -29,6 +29,7 @@ public class Login extends HttpServlet {
             //数据传递，/管理员页面
             userInf userInfById = jd.findUserInfById(id);
             request.getSession().setAttribute("username", userInfById.getRealname());
+            request.getSession().setAttribute("account_id", id);
             request.getRequestDispatcher("findAll").forward(request, response);
            // HttpSession session = request.getSession();
             //session.setAttribute("username", username);
