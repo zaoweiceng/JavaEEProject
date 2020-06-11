@@ -18,6 +18,7 @@ public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         // 1 接收请求，并获取请求参数
+        request.setCharacterEncoding("UTF-8");
         int id = Integer.parseInt(request.getParameter("name").trim());
         String pass = request.getParameter("pass");
         // 2 调用业务，并获取业务数据

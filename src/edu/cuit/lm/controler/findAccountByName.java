@@ -36,6 +36,7 @@ public class findAccountByName extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
+        request.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();

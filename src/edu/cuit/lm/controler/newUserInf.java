@@ -19,6 +19,7 @@ public class newUserInf extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         // 1 接收请求，并获取请求参数
+        request.setCharacterEncoding("UTF-8");
         userInf user = new userInf();
         user.setRealname(request.getParameter("name"));
         user.setpWd(request.getParameter("pass1"));

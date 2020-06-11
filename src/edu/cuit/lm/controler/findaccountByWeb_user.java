@@ -29,6 +29,7 @@ public class findaccountByWeb_user extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
         //1.接受参数
+        request.setCharacterEncoding("UTF-8");
         int id = Integer.parseInt(request.getParameter("id").trim());
         String web = request.getParameter("web");
         JDBCUtil jd = new JDBCUtil();

@@ -35,6 +35,7 @@ public class addNewAccout_user extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
+        request.setCharacterEncoding("UTF-8");
         account ac = new account();
         userSaw usersaw = new userSaw();
         password pa = new password();

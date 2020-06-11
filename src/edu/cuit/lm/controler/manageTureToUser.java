@@ -19,6 +19,7 @@ public class manageTureToUser extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
         //1.接受参数
+        request.setCharacterEncoding("UTF-8");
         int id = (Integer) request.getSession().getAttribute("account_id");
         //删除一条消息；
         //jd.delAccount(id);
