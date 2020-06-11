@@ -9,8 +9,7 @@
         body {
             background-image: url('Image/timg.jpg');
             background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height:100%;
+            background-size: cover;
         }
         .login-wrapper{
             border-style: solid;

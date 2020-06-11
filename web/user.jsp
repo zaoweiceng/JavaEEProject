@@ -52,6 +52,9 @@
         caption {
             font-size: 18px;
         }
+        #addweb{
+            float: right;
+        }
     </style>
     <script>
         function logout() {
@@ -76,9 +79,12 @@
 <body>
 <header>
     <a href="login.jsp" onclick="logout()">返回登录</a>
-    <h2>用户界面</h2>
+    <div id = "addweb">
+        <a href="addweb.jsp">注册网站</a>
+    </div>
 </header>
 <div id="all">
+    <h2>用户界面</h2>
     <hr>
     <div id="use">
         <form id="mages" name="mages"  method="post">
