@@ -34,7 +34,7 @@ public class changeUserPassword_user extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
-        int id = Integer.parseInt(request.getParameter("id").trim());
+        int id = Integer.parseInt(request.getParameter("name").trim());
         //获取新密码
         String pass = request.getParameter("pass");
         //2.函数，修改函数/修改idUser
