@@ -68,7 +68,7 @@
         }
         function look(id, web) {
             if (confirm("查看密码")){
-                location.href = "${pageContext.request.contextPath}/findWebIdUser?id=" + id + "&web=" +web
+                location.href = "${pageContext.request.contextPath}/findWebId_user?id=" + id + "&web=" +web
             }
         }
     </script>
@@ -81,7 +81,7 @@
 <div id="all">
     <hr>
     <div id="use">
-        <form id="mages" name="mages" action="${pageContext.request.contextPath}" method="post">
+        <form id="mages" name="mages"  method="post">
         <p>个人信息 </p>
         <h>用户ID: ${userinf_name.idUser}</h>
         <br>
@@ -114,11 +114,11 @@
                     <form action=${pageContext.request.contextPath}/changeAccountName method="post">
                         <td><input id="idUser" name="idUser" value="${us.idUser}" disabled></td>
                         <td><input id="idWeb" name="idWeb" value="${us.idWeb}"></td>
-                        <td><input id="idDate" name="idDate" value="${us.idDate}"></td>
+                        <td><input id="idDate" name="idDate" value="${us.idDate.year+1900}-${us.idDate.month+1}-${us.idDate.date}"></td>
                         <td><input id="note" name="note" value="${us.note}"></td>
-                        <td><a class="btn btn-default btn-sm" onclick="look(${us.idUser}, ${us.idWeb})" >查看密码</a></td>
-                        <td><a class="btn btn-default btn-sm" onclick="deleteUser(${us.idUser}, ${us.idWeb})" >删除</a></td>
-                        <td><a class="btn btn-default btn-sm" type="submit">修改</a></td>
+                        <td><button><a class="btn btn-default btn-sm" onclick="look(${us.idUser}, ${us.idWeb})" >查看密码</a></button></td>
+                        <td><button class="btn btn-default btn-sm" onclick="deleteUser(${us.idUser}, ${us.idWeb})" >删除</button></td>
+                        <td><button class="btn btn-default btn-sm" type="submit">修改</button></td>
                     </form>
                 </tr>
             </c:forEach>

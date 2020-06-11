@@ -36,7 +36,7 @@ public class ListUserSaw extends HttpServlet {
         //1.获取参数
         request.setCharacterEncoding("UTF-8");
         //2.函数，查找函数
-        int id = Integer.parseInt(request.getParameter("account_id"));
+        int id = (Integer) request.getSession().getAttribute("account_id");
         packUtil pa  = new packUtil();
         List<userSaw> List_UserSaw = pa.finUserSawAllById(id);
         JDBCUtil jd = new JDBCUtil();

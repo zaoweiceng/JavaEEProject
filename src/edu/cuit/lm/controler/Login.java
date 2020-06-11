@@ -37,7 +37,8 @@ public class Login extends HttpServlet {
             //普通用户
             account ac = new account();
             ac.setId(id);
-            request.setAttribute("account_id", ac);
+            request.setAttribute("account_id", ac.getId());
+            request.getSession().setAttribute("account_id", ac.getId());
             request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
             //用户页面；
         }
