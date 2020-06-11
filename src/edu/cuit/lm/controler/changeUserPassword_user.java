@@ -39,8 +39,7 @@ public class changeUserPassword_user extends HttpServlet {
         String pass = request.getParameter("pass");
         //2.函数，修改函数/修改idUser
         JDBCUtil jd = new JDBCUtil();
-        userInf user = new userInf();
-        user.setIdUser(id);
+        userInf user = jd.findUserInfById(id);
         user.setpWd(pass);
         jd.updateUserInf(user);
         password pa = new password();

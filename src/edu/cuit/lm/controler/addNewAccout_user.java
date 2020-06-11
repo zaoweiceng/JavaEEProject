@@ -37,12 +37,12 @@ public class addNewAccout_user extends HttpServlet {
         //1.获取参数
         account ac = new account();
         password pa = new password();
-        ac.setId(Integer.parseInt(request.getParameter("id").trim()));
+        ac.setId((Integer) request.getSession().getAttribute("account_id"));
         ac.setIdUser(request.getParameter("idUser"));
         pa.setIdPwd(ac.getId());
         pa.setPassword(request.getParameter("pass"));
         ac.setIdWeb(request.getParameter("web"));
-        ac.setIdDate(new Date(request.getParameter("Date")));
+        pa.setNote(request.getParameter("note"));
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
         jd.addAcount(ac);
