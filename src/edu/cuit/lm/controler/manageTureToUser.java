@@ -14,7 +14,7 @@ import java.io.IOException;
 /*
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/manageTureToUser"})
+@WebServlet({ "/manageTurnToUser"})
 public class manageTureToUser extends HttpServlet {
     private static final long serialVersionUID =1L;
 
