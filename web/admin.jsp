@@ -44,6 +44,11 @@
                 }
             }
         }
+        function turn(id) {
+            if (confirm("个人信息")){
+                location.href = "${pageContext.request.contextPath}/manageTurnToUser?id=" + id
+            }
+        }
 
     </script>
 </head>
@@ -66,7 +71,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <c:if test="${username != null}">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="user.jsp">个人信息</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}/manageTurnToUser" target="_blank">个人信息</a></li>
                 </ul>
             </c:if>
             <ul class="nav navbar-nav navbar-right">
@@ -81,7 +86,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">个人中心 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="user.jsp" target="_blank">个人信息</a></li>
+                        <li><a href="${pageContext.request.contextPath}/manageTurnToUser" target="_blank">个人信息</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="${pageContext.request.contextPath}/logOut">退出登录</a></li>
                     </ul>
