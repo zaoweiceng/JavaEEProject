@@ -80,12 +80,15 @@
 </head>
 <body>
 <header>
-    <a href="user.html">首页</a>
+    <a href="user.jsp">首页</a>
 </header>
 <div id = "all">
     <div class = "login-wrapper">
         <br><br>
-        <form action="user.html" name = "form1" method ="post">
+        <form action="user.jsp" name = "form1" method ="post">
+          web  ：<br>
+            <INPUT id=Idweb onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="idweb">
+            <br>
             用户名：<br>
             <INPUT id=Username onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="usernme">
             <br>
@@ -94,9 +97,6 @@
             <br>
             确认密码：<br>
             <INPUT id=UsernewSeA onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=password name="pass2" onblur="CheckPwd('UsernewSe',this)">
-            <br>
-            web  ：<br>
-            <INPUT id=Idweb onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="idweb">
             <br>
             备注：<br>
             <INPUT id=Idelse onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="idelse">
