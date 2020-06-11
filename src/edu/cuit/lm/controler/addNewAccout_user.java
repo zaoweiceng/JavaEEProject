@@ -39,17 +39,19 @@ public class addNewAccout_user extends HttpServlet {
         userSaw usersaw = new userSaw();
         password pa = new password();
         usersaw.setId((Integer) request.getSession().getAttribute("account_id"));
-        usersaw.setIdWeb(request.getParameter("web"));
-        usersaw.setIdUser(request.getParameter("idUser"));
+        usersaw.setIdWeb(request.getParameter("idweb"));
+        usersaw.setIdUser(request.getParameter("usernme"));
         usersaw.setPassword(request.getParameter("pass"));
-        usersaw.setNote(request.getParameter("note"));
+        usersaw.setNote(request.getParameter("idelse"));
 
         //2.函数，查找函数
         ac.setId(usersaw.getId());
         ac.setIdWeb(usersaw.getIdWeb());
         ac.setIdUser(usersaw.getIdUser());
+        ac.setIdDate(new Date());
         pa.setPassword(usersaw.getPassword());
         pa.setNote(usersaw.getNote());
+        pa.setSafety(1);
         packUtil pk = new packUtil();
         pk.zip(pa);
 

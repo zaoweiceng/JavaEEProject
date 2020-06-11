@@ -35,12 +35,17 @@ public class changeUserPassword_user extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
-        int id = Integer.parseInt(request.getParameter("id").trim());
+        request.setCharacterEncoding("UTF-8");
+        int id = (Integer) request.getSession().getAttribute("account_id");
         //获取新密码
-        String name = request.getParameter("realname");
-        String pWd = request.getParameter("pWd");
+        String name = request.getParameter("name");
         String sex = request.getParameter("sex");
-        Date date = new Date(request.getParameter("birthday"));
+        String birthday = request.getParameter("birthday");
+        String[] split = birthday.split("-");
+        Date date = new Date();
+        date.setYear(Integer.parseInt(split[0].trim())-1900);
+        date.setMonth(Integer.parseInt(split[1].trim())-1);
+        date.setDate(Integer.parseInt(split[2].trim()));
         String tel = request.getParameter("tel");
         String email = request.getParameter("email");
         //2.函数，修改函数/修改idUser
@@ -48,14 +53,10 @@ public class changeUserPassword_user extends HttpServlet {
         userInf user = jd.findUserInfById(id);
         user.setRealname(name);
         user.setSex(sex);
-        user.setpWd(pWd);
         user.setBirthday(date);
         user.setTel(tel);
         user.setEmail(email);
         jd.updateUserInf(user);
-        password pa = new password();
-
-
         //3.跳转
         request.setAttribute("account_id", id);
         //request.getRequestDispatcher("/showUser3").forward(request, response);

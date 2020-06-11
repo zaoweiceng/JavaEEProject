@@ -88,7 +88,7 @@
 <div id = "all">
     <div class = "login-wrapper">
         <br><br>
-        <form action="user.jsp" name = "form1" method ="post">
+        <form action="${pageContext.request.contextPath}/addNewAccount" name = "form1" method ="post">
           web  ：<br>
             <INPUT id=Idweb onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="idweb">
             <br>

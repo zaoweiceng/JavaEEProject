@@ -52,7 +52,8 @@
         caption {
             font-size: 18px;
         }
-        #addweb{
+
+        #addweb {
             float: right;
         }
     </style>
@@ -64,14 +65,16 @@
                 return false;
             }
         }
+
         function deleteUser(id, web) {
             if (confirm("确定删除此记录吗？")) {
-                location.href = "${pageContext.request.contextPath}/deleteAccount?id=" + id + "&web=" +web
+                location.href = "${pageContext.request.contextPath}/deleteAccount?id=" + id + "&web=" + web
             }
         }
+
         function look(id, web) {
-            if (confirm("查看密码")){
-                location.href = "${pageContext.request.contextPath}/findWebId_user?id=" + id + "&web=" +web
+            if (confirm("查看密码")) {
+                location.href = "${pageContext.request.contextPath}/findWebId_user?id=" + id + "&web=" + web
             }
         }
     </script>
@@ -79,50 +82,58 @@
 <body>
 <header>
     <a href="login.jsp" onclick="logout()">返回登录</a>
-    <div id = "addweb">
+    <div id="addweb">
         <a href="addweb.jsp">注册网站</a>
     </div>
 </header>
 <div id="all">
     <h2>用户界面</h2>
-    用户ID: <input id="userid" name="userid" type = "text" value= "${userinf_name.idUser}">
-    <br>
-    用户名：<input id="usernamae" name="name" type = "text" value= "${userinf_name.realname}">
-    <br>
-    性别：<input id="usersex" name="sex" type = "text" value= "${userinf_name.sex}">
-    <br>
-    生日：<input id="userbir" name="birthday" type = "text" value= " ${userinf_name.birthday.year+1900}-${userinf_name.birthday.month+1}-${userinf_name.birthday.date}">
-    <br>
-    电话：<input id="usertel" name="tel" type = "text" value= "${userinf_name.tel}">
-    <br>
-    email:<input id="useremail" name="email" type = "text" value= "${userinf_name.email}">
-    <br>
+    <form id="mainTable1" action="${pageContext.request.contextPath}/changeUserPassword" name="mainTable1" method="post">
+        用户ID: <input id="userid" disabled name="userid" type="text" value="${userinf_name.idUser}">
+        <br>
+        用户名：<input id="usernamae" name="name" type="text" value="${userinf_name.realname}">
+        <br>
+        性别：<input id="usersex" name="sex" type="text" value="${userinf_name.sex}">
+        <br>
+        生日：<input id="userbir" name="birthday" type="text"
+                  value=" ${userinf_name.birthday.year+1900}-${userinf_name.birthday.month+1}-${userinf_name.birthday.date}">
+        <br>
+        电话：<input id="usertel" name="tel" type="text" value="${userinf_name.tel}">
+        <br>
+        email:<input id="useremail" name="email" type="text" value="${userinf_name.email}">
+        <br>
+        <button class="btn btn-default btn-sm" type="submit">修改</button>
+    </form>
     <div id="table">
         <hr>
-        <form id="mainTable" name="mainTable"  method="post">
-        <table border="1" cellspacing="0" width="800px">
-            <caption>账号界面</caption>
-            <tr>
-                <th>用户名</th>
-                <th>用户web</th>
-                <th>注册日期</th>
-                <th>备注</th>
-                <th>操作</th>
-            </tr>
-            <c:forEach items="${userSawList}" varStatus="s" var="us">
+        <form id="mainTable" name="mainTable" method="post">
+            <table border="1" cellspacing="0" width="800px">
+                <caption>账号界面</caption>
                 <tr>
-                    <form action="${pageContext.request.contextPath}/changeAccountName" method="post">
-                        <td><input id="idUser" name="idUser" value="${us.idUser}" disabled></td>
-                        <td><input id="idWeb" name="idWeb" value="${us.idWeb}"></td>
-                        <td><input id="idDate" name="idDate" value="${us.idDate.year+1900}-${us.idDate.month+1}-${us.idDate.date}"></td>
-                        <td><input id="note" name="note" value="${us.note}"></td>
-                        <td><a href="${pageContext.request.contextPath}/findWebId_user?web=${us.idWeb}" target="_blank">查看密码</a></td>
-                        <td><a href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}"> 删除</a></td>
-                        <td><button class="btn btn-default btn-sm" type="submit">修改</button></td>
-                    </form>
+                    <th>用户名</th>
+                    <th>用户web</th>
+                    <th>注册日期</th>
+                    <th>备注</th>
+                    <th>操作</th>
                 </tr>
-            </c:forEach>
-        </table>
+                <c:forEach items="${userSawList}" varStatus="s" var="us">
+                    <tr>
+                        <form action="${pageContext.request.contextPath}/changeAccountName" method="post">
+                            <td><input id="idUser" name="idUser" value="${us.idUser}" disabled></td>
+                            <td><input id="idWeb" name="idWeb" value="${us.idWeb}"></td>
+                            <td><input id="idDate" disabled name="idDate"
+                                       value="${us.idDate.year+1900}-${us.idDate.month+1}-${us.idDate.date}"></td>
+                            <td><input id="note" name="note" value="${us.note}"></td>
+                            <td><a href="${pageContext.request.contextPath}/findWebId_user?web=${us.idWeb}"
+                                   target="_blank">查看密码</a></td>
+                            <td><a href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}"> 删除</a></td>
+                            <td>
+                                <button class="btn btn-default btn-sm" type="submit">修改</button>
+                            </td>
+                        </form>
+                    </tr>
+                </c:forEach>
+            </table>
         </form>
     </div>
 </div>
