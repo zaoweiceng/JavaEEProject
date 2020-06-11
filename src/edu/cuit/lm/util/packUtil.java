@@ -21,6 +21,7 @@ public class packUtil {
         us.setIdWeb(ac.getIdWeb());
         us.setNote(passwordById.getPassword());
         us.setPassword(passwordById.getPassword());
+        us.setId(ac.getId());
         return us;
     }
 

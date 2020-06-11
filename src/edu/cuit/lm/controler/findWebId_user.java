@@ -34,21 +34,20 @@ public class findWebId_user extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
         //1.接受参数
-        int id = Integer.parseInt(request.getParameter("id").trim());
+        request.setCharacterEncoding("UTF-8");
+        int id = (Integer) request.getSession().getAttribute("account_id");
         String web = request.getParameter("web");
         //2.查出密码！
+        System.out.println("id:" + id);
+        System.out.println("web:" + web);
         packUtil pk = new packUtil();
         JDBCUtil jd = new JDBCUtil();
-        userSaw user = pk.findUser(id, web);
         password pwd = jd.findPasswordById(jd.findAccountByWebAndId(id, web).getIdPwd());
-        String pass;
-        pk.unzip(pwd);
+        System.out.println(pwd);
         //删除一条消息；
-        //jd.delAccount(id);
         //3.跳转
-        //request.getRequestDispatcher("/showUser3").forward(request, response);
         PrintWriter writer = response.getWriter();
-        writer.write("<script>alert('密码为："+pwd.getPassword()+"')</script>");
+        writer.write("<script>alert('Your password is:"+pwd.getPassword()+"')</script>");
         writer.flush();
         writer.close();
     }

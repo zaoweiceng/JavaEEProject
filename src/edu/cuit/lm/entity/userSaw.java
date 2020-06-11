@@ -3,11 +3,20 @@ package edu.cuit.lm.entity;
 import java.util.Date;
 
 public class userSaw {
+    private Integer id;
     private String idUser;
     private String idWeb;
     private Date idDate;
     private String password;
     private String note;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     @Override
     public String toString() {

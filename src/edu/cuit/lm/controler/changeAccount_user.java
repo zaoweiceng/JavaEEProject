@@ -35,9 +35,9 @@ public class changeAccount_user extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数,获取新的储存名称
-        int id = Integer.parseInt(request.getParameter("id").trim());
+        int id = (Integer) request.getSession().getAttribute("account_id");
         //修改的名称
-        String webname = request.getParameter("name");
+        String webname = request.getParameter("idWeb");
         String pass = request.getParameter("pass");
         Date idDate;
         idDate = new Date(request.getParameter("idDate"));
