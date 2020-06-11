@@ -44,11 +44,10 @@ public class changeUserPassword_user extends HttpServlet {
         user.setpWd(pass);
         jd.updateUserInf(user);
         password pa = new password();
-        pa.setIdPwd(id);
-        pa.setPassword(pass);
+
 
         //3.跳转
-        request.setAttribute("account_id", pa);
+        request.setAttribute("account_id", id);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 

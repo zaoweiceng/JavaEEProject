@@ -46,10 +46,12 @@ public class addNewAccout_user extends HttpServlet {
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
         jd.addAcount(ac);
+        packUtil pk = new packUtil();
+        pk.zip(pa);
         jd.addPassword(pa);
         //3.跳转
 
-        request.setAttribute("account_id", pa);
+        request.setAttribute("account_id", ac.getId());
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 

@@ -46,17 +46,19 @@ public class changeAccount_user extends HttpServlet {
         account ac = new account();
         password pa = new password();
         JDBCUtil jd = new JDBCUtil();
+        packUtil pk = new packUtil();
         ac.setId(id);
         ac.setIdWeb(webname);
         pa.setIdPwd(id);
         pa.setPassword(pass);
+        pk.zip(pa);
         jd.updatePassword(pa);
         ac.setIdDate(idDate);
         ac.setIdUser(idUser);
         jd.updateAccount(ac);
 
         //3.跳转
-        request.setAttribute("account_id", pa);
+        request.setAttribute("account_id", id);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 

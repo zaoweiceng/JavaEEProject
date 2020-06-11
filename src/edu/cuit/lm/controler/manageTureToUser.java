@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 /*
-        * Servlet implementation class DeleteUser
+ * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/deleteAcount"})
-public class deleteAccount extends HttpServlet {
+@WebServlet({ "/manageTureToUser"})
+public class manageTureToUser extends HttpServlet {
     private static final long serialVersionUID =1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public deleteAccount(){
+    public manageTureToUser(){
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,16 +31,9 @@ public class deleteAccount extends HttpServlet {
             ServletException, IOException {
         //1.接受参数
         int id = Integer.parseInt(request.getParameter("id").trim());
-        String web = request.getParameter("web");
-        JDBCUtil jd = new JDBCUtil();
         //删除一条消息；
-
         //jd.delAccount(id);
-        account ac = new account();
-        ac.setId(id);
-        ac.setIdWeb(web);
-        password pa = jd.findPasswordById(id);
-        jd.delAccountByIdAndByWeb(ac);
+
         //3.跳转
         request.setAttribute("account_id", id);
         //request.getRequestDispatcher("/showUser3").forward(request, response);

@@ -36,16 +36,11 @@ public class ListUserSaw extends HttpServlet {
         //1.获取参数
         request.setCharacterEncoding("UTF-8");
         //2.函数，查找函数
-        password ac = (password) request.getAttribute("account_id");
+        int id = Integer.parseInt(request.getParameter("account_id"));
         packUtil pa  = new packUtil();
-        List<userSaw> List_UserSaw = pa.finUserSawAllById(ac.getIdPwd());
-        userInf us = new userInf();
-        us.setIdUser(ac.getIdPwd());
+        List<userSaw> List_UserSaw = pa.finUserSawAllById(id);
         JDBCUtil jd = new JDBCUtil();
-        userInf userinf_name = jd.findUserInfById(ac.getIdPwd());
-        pa.unzip(ac);
-        userinf_name.setpWd(ac.getPassword());
-
+        userInf userinf_name = jd.findUserInfById(id);
 
         //3.跳转
         request.setAttribute("userinf_name", userinf_name);
