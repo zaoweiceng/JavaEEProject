@@ -7,6 +7,7 @@ import edu.cuit.lm.dao.userPriDao;
 import edu.cuit.lm.entity.*;
 import edu.cuit.lm.util.JDBCUtil;
 import edu.cuit.lm.util.packUtil;
+import org.apache.ibatis.jdbc.Null;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,31 +37,39 @@ public class changeAccount_user extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数,获取新的储存名称
         int id = (Integer) request.getSession().getAttribute("account_id");
-        //修改的名称
-        String webname = request.getParameter("idWeb");
-        String pass = request.getParameter("pass");
-        Date idDate;
-        idDate = new Date(request.getParameter("idDate"));
+
+        String web = request.getParameter("web");
         String idUser = request.getParameter("idUser");
+        String pass = request.getParameter("pass");
+        String note = request.getParameter("note");
+
+        //修改的名称
         //2.函数，修改函数/修改账户内的名称
-        account ac = new account();
-        password pa = new password();
         JDBCUtil jd = new JDBCUtil();
         packUtil pk = new packUtil();
-        ac.setId(id);
-        ac.setIdWeb(webname);
-        pa.setIdPwd(id);
-        pa.setPassword(pass);
-        pk.zip(pa);
-        jd.updatePassword(pa);
-        ac.setIdDate(idDate);
-        ac.setIdUser(idUser);
-        jd.updateAccount(ac);
+        account ac = jd.findAccountByWebAndId(id, web);
+        if(ac == null){
+            request.setAttribute("web", web);
+            request.setAttribute("idUser", idUser);
+            request.setAttribute("pass", pass);
+            request.setAttribute("note", note);
+            request.getRequestDispatcher("/addNewAccount").forward(request, response);
+        }else{
+            ac.setIdUser(idUser);
+            password pa = new password();
 
+            pa.setPassword(pass);
+            pa.setIdPwd(id);
+            pk.zip(pa);
+            ac.setIdPwd(pa.getIdPwd());
+            jd.updatePassword(pa);
+            jd.updateAccount(ac);
+            request.setAttribute("account_id", id);
+            //request.getRequestDispatcher("/showUser3").forward(request, response);
+            request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
+        }
         //3.跳转
-        request.setAttribute("account_id", id);
-        //request.getRequestDispatcher("/showUser3").forward(request, response);
-        request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
+
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -2,6 +2,7 @@ package edu.cuit.lm.controler;
 
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
+import edu.cuit.lm.entity.userPri;
 import edu.cuit.lm.util.JDBCUtil;
 
 import javax.servlet.ServletException;
@@ -27,8 +28,15 @@ public class newUserInf extends HttpServlet {
 
         // 2 调用业务，并获取业务数据
         //调用jdbc
+        userPri userpri = new userPri();
         JDBCUtil  jdbc = new JDBCUtil();
         boolean x = jdbc.addUser(user);
+        userpri.setId(user.getIdUser());
+        String prity = "普通用户";
+        int r = 1;
+        userpri.setPriTy(prity);
+        userpri.setPriLv(r);
+        jdbc.updateUserPri(userpri);
 
         // 3 数据传递，并页面导航
         if(x == true){

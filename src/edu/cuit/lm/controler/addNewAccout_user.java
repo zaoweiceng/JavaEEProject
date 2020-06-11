@@ -36,19 +36,27 @@ public class addNewAccout_user extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
         account ac = new account();
+        userSaw usersaw = new userSaw();
         password pa = new password();
-        ac.setId((Integer) request.getSession().getAttribute("account_id"));
-        ac.setIdUser(request.getParameter("idUser"));
-        pa.setIdPwd(ac.getId());
-        pa.setPassword(request.getParameter("pass"));
-        ac.setIdWeb(request.getParameter("web"));
-        pa.setNote(request.getParameter("note"));
+        usersaw.setId((Integer) request.getSession().getAttribute("account_id"));
+        usersaw.setIdWeb(request.getParameter("web"));
+        usersaw.setIdUser(request.getParameter("idUser"));
+        usersaw.setPassword(request.getParameter("pass"));
+        usersaw.setNote(request.getParameter("note"));
+
         //2.函数，查找函数
-        JDBCUtil jd = new JDBCUtil();
-        jd.addAcount(ac);
+        ac.setId(usersaw.getId());
+        ac.setIdWeb(usersaw.getIdWeb());
+        ac.setIdUser(usersaw.getIdUser());
+        pa.setPassword(usersaw.getPassword());
+        pa.setNote(usersaw.getNote());
         packUtil pk = new packUtil();
         pk.zip(pa);
+
+        JDBCUtil jd = new JDBCUtil();
         jd.addPassword(pa);
+        ac.setIdPwd(pa.getIdPwd());
+        jd.addAcount(ac);
         //3.跳转
 
         request.setAttribute("account_id", ac.getId());
