@@ -118,9 +118,10 @@
                 </tr>
                 <c:forEach items="${userSawList}" varStatus="s" var="us">
                     <tr>
-                        <form action="${pageContext.request.contextPath}/changeAccountName" method="post">
-                            <td><input id="idUser" name="idUser" value="${us.idUser}" disabled></td>
-                            <td><input id="idWeb" name="idWeb" value="${us.idWeb}"></td>
+                        <form action="${pageContext.request.contextPath}/changeAccountName_user" method="post">
+                            <td><input id="idUser" name="idUser" value="${us.idUser}" ></td>
+                            <td><input id="aaa" disabled name="idsdWeb" value="${us.idWeb}"></td>
+                            <input hidden id="idWeb"  name="idWeb" value="${us.idWeb}">
                             <td><input id="idDate" disabled name="idDate"
                                        value="${us.idDate.year+1900}-${us.idDate.month+1}-${us.idDate.date}"></td>
                             <td><input id="note" name="note" value="${us.note}"></td>

@@ -115,7 +115,7 @@
 <div id = "all">
     <div class = "login-wrapper">
         <br><br>
-        <form action="${pageContext.request.contextPath}/" name = "form1" method ="post">
+        <form action="${pageContext.request.contextPath}/forgivePassword" name = "form1" method ="post">
           	  用户ID：<br>
             <INPUT id=UserName onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" name="userid" type = "text"><br>
             Email ：<br>

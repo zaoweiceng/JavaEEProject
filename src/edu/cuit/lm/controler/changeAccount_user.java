@@ -36,21 +36,21 @@ public class changeAccount_user extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数,获取新的储存名称
+        request.setCharacterEncoding("UTF-8");
         int id = (Integer) request.getSession().getAttribute("account_id");
 
-        String web = request.getParameter("web");
+        String web = request.getParameter("idWeb");
         String idUser = request.getParameter("idUser");
-        //String pass = request.getParameter("pass");
         String note = request.getParameter("note");
 
         //修改的名称
         //2.函数，修改函数/修改账户内的名称
         JDBCUtil jd = new JDBCUtil();
         account ac = jd.findAccountByWebAndId(id, web);
-
+        //System.out.println(ac);
 
         ac.setIdUser(idUser);
-        password pa = jd.findPasswordById(ac.getId());
+        password pa = jd.findPasswordById(ac.getIdPwd());
         pa.setNote(note);
         jd.updatePassword(pa);
         //跳转
