@@ -85,24 +85,18 @@
 </header>
 <div id="all">
     <h2>用户界面</h2>
-    <hr>
-    <div id="use">
-        <form id="mages" name="mages"  method="post">
-        <p>个人信息 </p>
-        <h>用户ID: ${userinf_name.idUser}</h>
-        <br>
-        <h>用户名：${userinf_name.realname}</h>
-        <br>
-        <h>性 别：${userinf_name.sex}</h>
-        <br>
-        <h>生 日：${userinf_name.birthday.year+1900}-${userinf_name.birthday.month+1}-${userinf_name.birthday.date}</h>
-        <br>
-        <h>电 话：${userinf_name.tel}</h>
-        <br>
-        <h>email :${userinf_name.email}</h>
-        <br>
-        </form>
-    </div>
+    用户ID: <input id="userid" name="userid" type = "text" value= "${userinf_name.idUser}">
+    <br>
+    用户名：<input id="usernamae" name="name" type = "text" value= "${userinf_name.realname}">
+    <br>
+    性别：<input id="usersex" name="sex" type = "text" value= "${userinf_name.sex}">
+    <br>
+    生日：<input id="userbir" name="birthday" type = "text" value= " ${userinf_name.birthday.year+1900}-${userinf_name.birthday.month+1}-${userinf_name.birthday.date}">
+    <br>
+    电话：<input id="usertel" name="tel" type = "text" value= "${userinf_name.tel}">
+    <br>
+    email:<input id="useremail" name="email" type = "text" value= "${userinf_name.email}">
+    <br>
     <div id="table">
         <hr>
         <form id="mainTable" name="mainTable"  method="post">
@@ -131,7 +125,6 @@
         </table>
         </form>
     </div>
-
 </div>
 <footer>
     <hr>
