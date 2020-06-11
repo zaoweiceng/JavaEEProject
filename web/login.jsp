@@ -10,7 +10,7 @@
         body {
             background-image: url('Image/timg.jpg');
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;
             height:500px;
         }
         .login-wrapper{
@@ -80,7 +80,7 @@
             <br>
             <LABEL for=CookieDate><INPUT id=CookieDate type=checkbox value=3 name=CookieDate>保存我的登录信息</LABEL>
             <br>
-            <INPUT type=hidden name=fromurl><INPUT id=Submit onclick="return CheckForm();" type=submit value=登　录 name=Submit><A href="Findpwd.jsp">忘记密码？</A></FORM>
+            <INPUT type=hidden name=fromurl><INPUT id=Submit onclick="return CheckForm();" type=submit value=登　录 name=Submit><A href="/addemail.jsp">忘记密码？</A></FORM>
         </form>
     </div>
 </div>

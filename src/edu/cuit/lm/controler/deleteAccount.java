@@ -4,6 +4,7 @@ package edu.cuit.lm.controler;
 import edu.cuit.lm.entity.account;
 import edu.cuit.lm.entity.password;
 import edu.cuit.lm.util.JDBCUtil;
+import edu.cuit.lm.util.daoImp;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,8 +31,9 @@ public class deleteAccount extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
         //1.接受参数
-        int id = Integer.parseInt(request.getParameter("id").trim());
+        request.setCharacterEncoding("UTF-8");
         String web = request.getParameter("web");
+        int id = (Integer) request.getSession().getAttribute("account_id");
         JDBCUtil jd = new JDBCUtil();
         //删除一条消息；
 
@@ -39,12 +41,13 @@ public class deleteAccount extends HttpServlet {
         account ac = new account();
         ac.setId(id);
         ac.setIdWeb(web);
-        password pa = jd.findPasswordById(id);
+        Integer idPwd = jd.findAccountByWebAndId(id, web).getIdPwd();
+        password pa = jd.findPasswordById(idPwd);
+        daoImp.getPassword().delPwdById(pa.getIdPwd());
         jd.delAccountByIdAndByWeb(ac);
         //3.跳转
         request.setAttribute("account_id", id);
-        //request.getRequestDispatcher("/showUser3").forward(request, response);
-        request.getRequestDispatcher("/finAllUserSaw").forward(request, response);
+        request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
