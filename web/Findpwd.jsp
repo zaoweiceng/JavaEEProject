@@ -76,7 +76,7 @@
     <div class = "login-wrapper">
         <a href="login.jsp">首页</a>
         <hr>
-        <form action="login.jsp" name = "form1" method ="post">
+        <form action="${pageContext.request.contextPath}/changeUserPassword" name = "form1" method ="post">
             用  户  名：<br>
             <INPUT id=UserName onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" name="name">
             <br>

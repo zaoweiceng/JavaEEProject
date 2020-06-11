@@ -66,8 +66,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <c:if test="${username != null}">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="${pageContext.request.contextPath}/findIdUserByName?curPage=1&rows=5">用户信息</a></li>
-                    <li><a href="${pageContext.request.contextPath}/findNote?t_curPage=1&t_rows=12">备忘录</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}/findAllUserSaw">个人信息</a></li>
                 </ul>
             </c:if>
             <ul class="nav navbar-nav navbar-right">
@@ -76,13 +75,13 @@
                     <a href="login.jsp">请登录</a>
                     </c:if>
                     <c:if test="${username != null}">
-                    <a>${username}, 欢迎您！</a>
+                    <a>${username}管理员, 欢迎您！</a>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">个人中心 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="user.jsp" target="_blank">账户信息</a></li>
+                        <li><a href="${pageContext.request.contextPath}/findAllUserSaw" target="_blank">个人信息</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="${pageContext.request.contextPath}/logOut">退出登录</a></li>
                     </ul>
