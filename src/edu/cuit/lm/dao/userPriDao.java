@@ -7,8 +7,7 @@ public interface userPriDao {
     @Select("select * from user_pri where id = #{id}")
     userPri findUserById(int id);
 
-    @Insert("insert into user_pri(priTy, priLv) values(#{priTy}, #{priLv})")
-    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
+    @Insert("insert into user_pri(id, priTy, priLv) values(#{id}, #{priTy}, #{priLv})")
     void insertInto(userPri user);
 
     @Delete("delete from user_pri where id = #{id}")

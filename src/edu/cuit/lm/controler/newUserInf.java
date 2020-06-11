@@ -4,6 +4,7 @@ import edu.cuit.lm.entity.password;
 import edu.cuit.lm.entity.userInf;
 import edu.cuit.lm.entity.userPri;
 import edu.cuit.lm.util.JDBCUtil;
+import edu.cuit.lm.util.daoImp;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,7 +37,8 @@ public class newUserInf extends HttpServlet {
         int r = 1;
         userpri.setPriTy(prity);
         userpri.setPriLv(r);
-        jdbc.updateUserPri(userpri);
+        daoImp.getUserPri().insertInto(userpri);
+
 
         // 3 数据传递，并页面导航
         if(x == true){
