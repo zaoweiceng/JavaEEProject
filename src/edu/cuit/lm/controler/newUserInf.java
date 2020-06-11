@@ -34,7 +34,7 @@ public class newUserInf extends HttpServlet {
         boolean x = jdbc.addUser(user);
         userpri.setId(user.getIdUser());
         String prity = "普通用户";
-        int r = 1;
+        int r = 2;
         userpri.setPriTy(prity);
         userpri.setPriLv(r);
         daoImp.getUserPri().insertInto(userpri);
