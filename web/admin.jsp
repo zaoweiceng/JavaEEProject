@@ -66,7 +66,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <c:if test="${username != null}">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="${pageContext.request.contextPath}/findAllUserSaw">用户信息</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}/findAllUserSaw">个人信息</a></li>
                 </ul>
             </c:if>
             <ul class="nav navbar-nav navbar-right">
