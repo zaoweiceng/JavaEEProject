@@ -4,6 +4,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <title>用户添加界面</title>
     <style>
         body {
@@ -13,12 +18,13 @@
         }
         .login-wrapper{
             border-style: solid;
-            width: 250px;
-            height: 350px;
-            background: rgba(123,157,245,0.4);
+            background: rgba(123, 157, 245, 0.8);
             text-align: center;
             margin-top: 10%;
-            margin-left: 40%;
+            margin-right: 35%;
+            margin-left: 35%;
+            border-radius: 50px;
+            border-color: #9d9d9d;
         }
         footer{
             text-align: center;
@@ -83,11 +89,11 @@
 </head>
 <body>
 <header>
-    <a href="user.jsp">首页</a>
+
 </header>
 <div id = "all">
     <div class = "login-wrapper">
-        <br><br>
+        <h1 style="text-align: center">添加网站</h1>
         <form action="${pageContext.request.contextPath}/addNewAccount" name = "form1" method ="post">
           web  ：<br>
             <INPUT id=Idweb onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="idweb">
@@ -103,8 +109,10 @@
             <br>
             备注：<br>
             <INPUT id=Idelse onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="idelse">
-            <br><br><br>
-            <INPUT type=hidden name=fromurl><INPUT id=Submit onclick="return CheckForm();" type=submit value=提交 name=Submit></FORM>
+            <br><br>
+            <INPUT type=hidden name=fromurl><INPUT id=Submit onclick="return CheckForm();" type=submit value=提交 name=Submit>
+            <br><a style="margin-top: 5px; margin-bottom: 5px" href="user.jsp" class="btn btn-default btn-sm">首页</a><br><br>
+        </FORM>
         </form>
     </div>
 </div>

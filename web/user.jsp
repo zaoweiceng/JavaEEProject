@@ -2,10 +2,15 @@
          pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
     <title>用户界面</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <style>
         body {
             background-image: url('Image/timg.jpg');
@@ -40,7 +45,7 @@
         }
 
         table {
-            background: #2aabd2;
+            background:  rgba(42, 171, 210, 0.6);
         }
 
         a {
@@ -55,6 +60,12 @@
 
         #addweb {
             float: right;
+        }
+        .fr{
+            background-color: rgba(128, 128, 128, 0.6);
+            text-align: center;
+            color: whitesmoke;
+            border-radius: 50px;
         }
     </style>
     <script>
@@ -79,36 +90,34 @@
         }
     </script>
 </head>
-<body>
+<body class="container">
 <header>
-    <a href="login.jsp" onclick="logout()">返回登录</a>
+    <form >
+    <a style="position: fixed" href="login.jsp" class="btn btn-default" onclick="logout()">返回登录</a>
     <div id="addweb">
-        <a href="addweb.jsp">注册网站</a>
+        <a style="position: fixed" href="addweb.jsp" class="btn btn-default">注册网站</a>
     </div>
+    </form>
 </header>
 <div id="all">
     <h2>用户界面</h2>
-    <form id="mainTable1" action="${pageContext.request.contextPath}/changeUserPassword" name="mainTable1" method="post">
-        用户ID: <input id="userid" disabled name="userid" type="text" value="${userinf_name.idUser}">
-        <br>
-        用户名：<input id="usernamae" name="name" type="text" value="${userinf_name.realname}">
-        <br>
-        性别：<input id="usersex" name="sex" type="text" value="${userinf_name.sex}">
-        <br>
-        生日：<input id="userbir" name="birthday" type="text"
+    <form class="fr" id="mainTable1" action="${pageContext.request.contextPath}/changeUserPassword" name="mainTable1" method="post">
+        <div style="margin: 10%;"><br>
+            用户ID: <input id="userid" class="form-control" disabled name="userid" type="text" value="${userinf_name.idUser}">
+        用户名：<input id="usernamae" class="form-control" name="name" type="text" value="${userinf_name.realname}">
+        性别：<input id="usersex" class="form-control" name="sex" type="text" value="${userinf_name.sex}">
+        生日：<input id="userbir" class="form-control" name="birthday" type="text"
                   value=" ${userinf_name.birthday.year+1900}-${userinf_name.birthday.month+1}-${userinf_name.birthday.date}">
-        <br>
-        电话：<input id="usertel" name="tel" type="text" value="${userinf_name.tel}">
-        <br>
-        email:<input id="useremail" name="email" type="text" value="${userinf_name.email}">
-        <br>
-        <button class="btn btn-default btn-sm" type="submit">修改</button>
+        电话：<input id="usertel" class="form-control" name="tel" type="text" value="${userinf_name.tel}">
+        email:<input id="useremail" class="form-control" name="email" type="text" value="${userinf_name.email}">
+        <br><button class="btn btn-default btn-sm" type="submit">修改</button>
+        </div>
     </form>
     <div id="table">
         <hr>
-        <form id="mainTable" name="mainTable" method="post">
-            <table border="1" cellspacing="0" width="800px">
-                <caption>账号界面</caption>
+        <div class="fr" id="mainTable" name="mainTable" method="post">
+            <table border="0" cellspacing="0" width="800px" style="text-align: center">
+                <caption style="text-align: center;color: whitesmoke">账号界面</caption>
                 <tr>
                     <th>用户名</th>
                     <th>用户web</th>
@@ -119,28 +128,27 @@
                 <c:forEach items="${userSawList}" varStatus="s" var="us">
                     <tr>
                         <form action="${pageContext.request.contextPath}/changeAccountName_user" method="post">
-                            <td><input id="idUser" name="idUser" value="${us.idUser}" ></td>
-                            <td><input id="aaa" disabled name="idsdWeb" value="${us.idWeb}"></td>
+                            <td><input class="form-control" id="idUser" name="idUser" value="${us.idUser}" ></td>
+                            <td><input class="form-control" id="aaa" disabled name="idWeb" value="${us.idWeb}"></td>
                             <input hidden id="idWeb"  name="idWeb" value="${us.idWeb}">
-                            <td><input id="idDate" disabled name="idDate"
+                            <td><input id="idDate" class="form-control" disabled name="idDate"
                                        value="${us.idDate.year+1900}-${us.idDate.month+1}-${us.idDate.date}"></td>
-                            <td><input id="note" name="note" value="${us.note}"></td>
+                            <td><input id="note" class="form-control" name="note" value="${us.note}"></td>
                             <td><a href="${pageContext.request.contextPath}/findWebId_user?web=${us.idWeb}"
-                                   target="_blank">查看密码</a></td>
-                            <td><a href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}"> 删除</a></td>
+                                   target="_blank " class="btn btn-default">查看密码</a></td>
+                            <td><a class="btn btn-default" href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}"> 删除</a></td>
                             <td>
-                                <button class="btn btn-default btn-sm" type="submit">修改</button>
+                                <button class="btn btn-default" type="submit">修改</button>
                             </td>
                         </form>
                     </tr>
                 </c:forEach>
             </table>
-        </form>
+            <br>
+        </div>
     </div>
 </div>
-<footer>
-    <hr>
-    Copyright by LongMengGroup
-</footer>
+<div style="text-align: center">Copyright&copy; by LongMengGroup</div>
+<br>
 </body>
 </html>

@@ -54,8 +54,6 @@ public class changeAccount_user extends HttpServlet {
         pa.setNote(note);
         jd.updatePassword(pa);
         //跳转
-        request.setAttribute("account_id", id);
-        //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 
 

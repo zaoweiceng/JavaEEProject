@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet("/login")
@@ -46,8 +47,8 @@ public class Login extends HttpServlet {
         }
         else{
             //登录失败！
-            request.setAttribute("error", "登录失败！");
-            request.getRequestDispatcher("/field.jsp").forward(request, response);
+            request.setAttribute("error", "用户名或密码错误！");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
 

@@ -4,22 +4,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <title>邮箱验证界面</title>
     <style>
         body {
             background-image: url('Image/timg.jpg');
             background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height:600%;
+            background-size: cover;
         }
         .login-wrapper{
             border-style: solid;
-            width: 250px;
-            height: 380px;
-            background: #2aabd2;
+            background: rgba(123, 157, 245, 0.8);
             text-align: center;
             margin-top: 10%;
-            margin-left: 40%;
+            margin-right: 35%;
+            margin-left: 35%;
+            border-radius: 50px;
+            border-color: #9d9d9d;
         }
         footer{
             text-align: center;
@@ -110,9 +116,9 @@
 </head>
 <body>
 <header>
-    <a href="login.jsp">首页</a>
+
 </header>
-<div id = "all">
+<div id = "all" style="text-align: center">
     <div class = "login-wrapper">
         <br><br>
         <form action="${pageContext.request.contextPath}/forgivePassword" name = "form1" method ="post">
@@ -132,7 +138,10 @@
             	验证码：<br>
             <input type="text" onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" name = "testemail" id = "Testemail" placeholder="请输入验证码">
             <br><br><br>
-            <INPUT type=hidden name=fromurl><INPUT id=Submit onclick="return CheckForm();" type=submit value=提交 name=Submit></FORM>
+            <INPUT type=hidden name=fromurl><INPUT  id=Submit class="btn " onclick="return CheckForm();" type=submit value=提交 name=Submit>
+            <br><a style="margin-top: 5px; margin-bottom: 5px" class="btn btn-default btn-sm" href="login.jsp">返回首页</a></FORM>
+
+        <br>
        
     </div>
 </div>
