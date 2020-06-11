@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,13 +35,23 @@ public class changeUserPassword_user extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
-        int id = Integer.parseInt(request.getParameter("userid").trim());
+        int id = Integer.parseInt(request.getParameter("id").trim());
         //获取新密码
-        String pass = request.getParameter("pass");
+        String name = request.getParameter("realname");
+        String pWd = request.getParameter("pWd");
+        String sex = request.getParameter("sex");
+        Date date = new Date(request.getParameter("birthday"));
+        String tel = request.getParameter("tel");
+        String email = request.getParameter("email");
         //2.函数，修改函数/修改idUser
         JDBCUtil jd = new JDBCUtil();
         userInf user = jd.findUserInfById(id);
-        user.setpWd(pass);
+        user.setRealname(name);
+        user.setSex(sex);
+        user.setpWd(pWd);
+        user.setBirthday(date);
+        user.setTel(tel);
+        user.setEmail(email);
         jd.updateUserInf(user);
         password pa = new password();
 
