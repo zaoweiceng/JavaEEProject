@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Servlet implementation class DeleteUser
  */
-@WebServlet({ "/changeAccountName"})
+@WebServlet({ "/changeAccountName_user"})
 public class changeAccount_user extends HttpServlet {
     private static final long serialVersionUID =1L;
 
@@ -40,35 +40,24 @@ public class changeAccount_user extends HttpServlet {
 
         String web = request.getParameter("web");
         String idUser = request.getParameter("idUser");
-        String pass = request.getParameter("pass");
+        //String pass = request.getParameter("pass");
         String note = request.getParameter("note");
 
         //修改的名称
         //2.函数，修改函数/修改账户内的名称
         JDBCUtil jd = new JDBCUtil();
-        packUtil pk = new packUtil();
         account ac = jd.findAccountByWebAndId(id, web);
-        if(ac == null){
-            request.setAttribute("web", web);
-            request.setAttribute("idUser", idUser);
-            request.setAttribute("pass", pass);
-            request.setAttribute("note", note);
-            request.getRequestDispatcher("/addNewAccount").forward(request, response);
-        }else{
-            ac.setIdUser(idUser);
-            password pa = new password();
 
-            pa.setPassword(pass);
-            pa.setIdPwd(id);
-            pk.zip(pa);
-            ac.setIdPwd(pa.getIdPwd());
-            jd.updatePassword(pa);
-            jd.updateAccount(ac);
-            request.setAttribute("account_id", id);
-            //request.getRequestDispatcher("/showUser3").forward(request, response);
-            request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
-        }
-        //3.跳转
+
+        ac.setIdUser(idUser);
+        password pa = jd.findPasswordById(ac.getId());
+        pa.setNote(note);
+        jd.updatePassword(pa);
+        //跳转
+        request.setAttribute("account_id", id);
+        //request.getRequestDispatcher("/showUser3").forward(request, response);
+        request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
+
 
 
     }
