@@ -43,11 +43,12 @@ public class changeUserPassword_user extends HttpServlet {
         user.setIdUser(id);
         user.setpWd(pass);
         jd.updateUserInf(user);
-        account ac = new account();
-        ac.setId(id);
+        password pa = new password();
+        pa.setIdPwd(id);
+        pa.setPassword(pass);
 
         //3.跳转
-        request.setAttribute("account_id", ac);
+        request.setAttribute("account_id", pa);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 

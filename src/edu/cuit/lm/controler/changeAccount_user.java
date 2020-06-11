@@ -38,21 +38,25 @@ public class changeAccount_user extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id").trim());
         //修改的名称
         String webname = request.getParameter("name");
-        int pwd = Integer.parseInt(request.getParameter("pass"));
+        String pass = request.getParameter("pass");
         Date idDate;
         idDate = new Date(request.getParameter("idDate"));
         String idUser = request.getParameter("idUser");
         //2.函数，修改函数/修改账户内的名称
         account ac = new account();
+        password pa = new password();
         JDBCUtil jd = new JDBCUtil();
         ac.setId(id);
         ac.setIdWeb(webname);
-        ac.setIdPwd(pwd);
+        pa.setIdPwd(id);
+        pa.setPassword(pass);
+        jd.updatePassword(pa);
         ac.setIdDate(idDate);
         ac.setIdUser(idUser);
         jd.updateAccount(ac);
+
         //3.跳转
-        request.setAttribute("account_id", ac);
+        request.setAttribute("account_id", pa);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 

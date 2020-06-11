@@ -2,6 +2,7 @@ package edu.cuit.lm.controler;
 
 
 import edu.cuit.lm.entity.account;
+import edu.cuit.lm.entity.password;
 import edu.cuit.lm.util.JDBCUtil;
 
 import javax.servlet.ServletException;
@@ -38,9 +39,10 @@ public class deleteAccount extends HttpServlet {
         account ac = new account();
         ac.setId(id);
         ac.setIdWeb(web);
+        password pa = jd.findPasswordById(id);
         jd.delAccountByIdAndByWeb(ac);
         //3.跳转
-        request.setAttribute("account_id", ac);
+        request.setAttribute("account_id", pa);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/finAllUserSaw").forward(request, response);
 

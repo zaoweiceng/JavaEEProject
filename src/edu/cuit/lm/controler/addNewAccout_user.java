@@ -36,17 +36,20 @@ public class addNewAccout_user extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //1.获取参数
         account ac = new account();
+        password pa = new password();
         ac.setId(Integer.parseInt(request.getParameter("id").trim()));
         ac.setIdUser(request.getParameter("idUser"));
-        ac.setIdPwd(request.getIntHeader("pass"));
+        pa.setIdPwd(ac.getId());
+        pa.setPassword(request.getParameter("pass"));
         ac.setIdWeb(request.getParameter("web"));
         ac.setIdDate(new Date(request.getParameter("Date")));
         //2.函数，查找函数
         JDBCUtil jd = new JDBCUtil();
         jd.addAcount(ac);
+        jd.addPassword(pa);
         //3.跳转
 
-        request.setAttribute("account_id", ac);
+        request.setAttribute("account_id", pa);
         //request.getRequestDispatcher("/showUser3").forward(request, response);
         request.getRequestDispatcher("/findAllUserSaw").forward(request, response);
 
