@@ -111,7 +111,7 @@
             <INPUT id=Idelse onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'" type=text name="idelse">
             <br><br>
             <INPUT type=hidden name=fromurl><INPUT id=Submit onclick="return CheckForm();" type=submit value=提交 name=Submit>
-            <br><a style="margin-top: 5px; margin-bottom: 5px" href="user.jsp" class="btn btn-default btn-sm">返回个人界面</a><br><br>
+            <br><a style="margin-top: 5px; margin-bottom: 5px" href="${pageContext.request.contextPath}/findAllUserSaw" class="btn btn-default btn-sm">返回个人界面</a><br><br>
         </FORM>
         </form>
     </div>
