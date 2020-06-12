@@ -68,7 +68,7 @@
                 form.UserNew.focus();
                 return false;
             }
-            if (form.UserSex.value === '') {
+           /* if (form.UserSex.value === '') {
                 alert("请输入性别!");
                 form.UserSex.focus();
                 return false;
@@ -77,14 +77,14 @@
                 alert("请输入生日!");
                 form.UserBir.focus();
                 return false;
-            }
+            }*/
             if (form.Userphone.value === '') {
-                alert("请输入电话!");
+                alert("请输入电话!（方便找回密码）");
                 form.Userphone.focus();
                 return false;
             }
             if (form.Useremail.value === '') {
-                alert("请输入生日!");
+                alert("请输入邮箱!（方便找回密码）");
                 form.Useremail.focus();
                 return false;
             }
@@ -124,11 +124,11 @@
             <INPUT id=UserName onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'"
                    name="name"><INPUT id=act1 type=hidden value=cool name=act1>
             <br>
-            性 别：<br>
+            性 别(可不填)：<br>
             <INPUT id=UserSex onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'"
                    name="Sex"><INPUT id=act2 type=hidden value=cool name=act2>
             <br>
-            生 日：<br>
+            生 日(可不填)：<br>
             <INPUT id=UserBir onblur="this.className='input_onBlur'" onfocus="this.className='input_onFocus'"
                    name="Birthday"><INPUT id=act3 type=hidden value=cool name=act3>
             <br>

@@ -48,11 +48,11 @@
 </header>
 <div id = "all">
     <div class = "login-wrapper">
-        <a href="login.jsp">返回首页</a>
+        <a href="login.jsp">重新登录</a>
         <hr>
         <form action="" name = "form1" method ="post">
             <br><br> <br>
-              <h2>登录失败，账号或密码错误</h2>
+              <h2>登录失败，账号或密码错误，请重新登录</h2>
         </form>
     </div>
 </div>

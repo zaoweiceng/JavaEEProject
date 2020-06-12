@@ -86,7 +86,7 @@
             }
             form.Submit.value="提交";
             form.Submit.disabled=true;
-            alert("正在提交，请等候");
+            alert("修改成功，请登录");
             form.submit();
             return true;
         }
@@ -110,7 +110,7 @@
                 return false;
             }
             
-            alert("发送失败");
+            alert("发送成功，请查看邮件内容");
         }
     </script>
 </head>

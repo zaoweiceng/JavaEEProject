@@ -20,8 +20,15 @@
     <script src="js/bootstrap.min.js"></script>
     <title>管理员界面</title>
     <script>
+        function logout() {
+            if (window.confirm('是否退出登录?')) {
+                window.location.href = 'login.jsp';
+            } else {
+                return false;
+            }
+        }
         function deleteUser(id) {
-            if (confirm("确定删除此记录吗？")) {
+            if (window.confirm("确定注销该账号吗？")) {
                 location.href = "${pageContext.request.contextPath}/deleteUser_manage?id=" + id
             }
         }
@@ -68,7 +75,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <li><a class="navbar-brand" href="login.jsp">返回登录页</a></li>
+            <li><a class="navbar-brand" href="login.jsp" onclick="logout()">返回登录页</a></li>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -129,7 +136,7 @@
                         <td>${us.tel}</td>
                         <td>${us.email}</td>
                         <td>
-                            <a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.idUser})">删除</a></td>
+                            <a class="btn btn-default btn-sm" href="javascript:deleteUser(${us.idUser})">注销</a></td>
                     </tr>
                 </c:forEach>
             </table>
