@@ -95,7 +95,7 @@
     <form >
     <a style="position: fixed" href="login.jsp" class="btn btn-default" onclick="logout()">返回登录</a>
     <div id="addweb">
-        <a style="position: fixed" href="addweb.jsp" class="btn btn-default">注册网站</a>
+        <a style="position: fixed" href="addweb.jsp" class="btn btn-default">添加网站</a>
     </div>
     </form>
 </header>
@@ -136,7 +136,7 @@
                             <td><input id="note" class="form-control" name="note" value="${us.note}"></td>
                             <td><a href="${pageContext.request.contextPath}/findWebId_user?web=${us.idWeb}"
                                    target="_blank " class="btn btn-default">查看密码</a></td>
-                            <td><a class="btn btn-default" href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}">注销</a></td>
+                            <td><a class="btn btn-default" href="${pageContext.request.contextPath}/deleteAcount?web=${us.idWeb}">删除</a></td>
                             <td>
                                 <button class="btn btn-default" type="submit">修改</button>
                             </td>
